@@ -88,7 +88,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Click",
+                    "name": "Clicking",
                     "type": "Button",
                     "id": "f7d3455a-45bb-4ccf-9d7b-76c4d02b4036",
                     "expectedControlType": "",
@@ -97,7 +97,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Traking",
+                    "name": "Tracking",
                     "type": "Value",
                     "id": "1860f191-79c1-49f2-8786-e9dabe6369fb",
                     "expectedControlType": "Vector2",
@@ -499,7 +499,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Click",
+                    "action": "Clicking",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -510,7 +510,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Traking",
+                    "action": "Tracking",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
