@@ -161,7 +161,7 @@ public class DragAndDropController: MonoBehaviour
         rb.isKinematic = true; // il n'est pas touché par la phisique
         col.enabled = false; // si le bouton est pressé on désactive le collider
 
-        OnPick.Invoke(selectedObject.GetComponent<GameObject>());
+        OnPick.Invoke(selectedObject.gameObject);
     }
 
     public void OnTouchRelease(InputAction.CallbackContext context)
