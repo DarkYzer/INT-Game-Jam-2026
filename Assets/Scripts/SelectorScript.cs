@@ -48,7 +48,7 @@ public class SelectorScript : MonoBehaviour
                     exploredObjects[explorer] = 1;
                     myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPoints[i].transform.position, Quaternion.identity);
                     myObjects[i].SetActive(true);
-                    myObjects[i].GetComponent<Collider>().enabled = false;
+                    // myObjects[i].GetComponent<Collider>().enabled = false;
                 }
             }
         }
