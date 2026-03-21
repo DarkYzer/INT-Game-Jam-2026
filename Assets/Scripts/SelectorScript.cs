@@ -21,6 +21,7 @@ public class SelectorScript : MonoBehaviour
 
     [SerializeField] List<TextMeshProUGUI> weightTexts; // List of weights
 
+    private bool readyToDrop = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,6 +52,7 @@ public class SelectorScript : MonoBehaviour
                 {
                     exploredObjects[explorer] = 1;
                     myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPoints[i].transform.position, Quaternion.identity);
+                    myObjects[i].transform.parent = gameObject.transform;
                     myObjects[i].SetActive(true);
                     weightTexts[i].text = myObjects[i].GetComponent<Rigidbody>().mass.ToString() + " kg";
                 }
@@ -58,10 +60,33 @@ public class SelectorScript : MonoBehaviour
         }
     }
 
+    void dropRandom()
+    {
+        while (true)
+        {
+
+        }
+    }
+
+    void drop(GameObject droppedObject)
+    {
+        return;
+    }
+
     void removeObject(GameObject selectedObject)
     {
         StartCoroutine(removeObjectCoroutine(selectedObject));
+        StopCoroutine(timerToDrop());
+        StartCoroutine(timerToDrop());
     }
+    IEnumerator timerToDrop()
+    {
+        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
+        dropRandom();
+    }
+
 
     IEnumerator removeObjectCoroutine(GameObject selectedObject)
     {
