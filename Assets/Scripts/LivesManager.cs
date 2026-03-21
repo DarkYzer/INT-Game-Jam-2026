@@ -21,7 +21,6 @@ public class LivesManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.isTrigger) return;
-        Debug.Log("hehehe");
         lives--;
         StartCoroutine(Remove(other.gameObject));
         DragAndDropController.Instance.hasBeenPlaced.Remove(other.transform);
