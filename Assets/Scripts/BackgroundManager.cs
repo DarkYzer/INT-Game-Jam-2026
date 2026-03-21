@@ -13,11 +13,9 @@ public class BackgroundManager : MonoBehaviour
 
     void Update()
     {
-        if (balance == null || rectTransform == null)
-            return;
-
         float angle = balance.eulerAngles.z;
         if (angle > 180) angle -= 360;
+
 
         float normalized = Mathf.Clamp(angle / maxAngle, -1f, 1f);
 
