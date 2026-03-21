@@ -18,11 +18,11 @@ public class SloundSliders : MonoBehaviour
 
     public void ChangeMusicVolume(float value)
     {
-        audioMixer.SetFloat("musicVolume", value);
+        audioMixer.SetFloat("musicVolume", Mathf.Log(value)*20f);
     }
 
     public void ChangeSfxVolume(float value)
     {
-        audioMixer.SetFloat("sfxVolume", value);
+        audioMixer.SetFloat("sfxVolume", Mathf.Log(value)*20f);
     }
 }

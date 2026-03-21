@@ -167,7 +167,6 @@ public class DragAndDropController: MonoBehaviour
         // on récupère le collider pas trigger
         foreach (Collider col in selectedObject.GetComponentsInChildren<Collider>())
         {
-            col.enabled = true;
             if (col.isTrigger)
                 cols.Add(col);
         }
@@ -185,8 +184,8 @@ public class DragAndDropController: MonoBehaviour
         if (rb == null || selectedObject == null) return;
         rb.useGravity = true; // si le bouton est laché on réactive la gravité
         rb.isKinematic = false; // il est touché par la phisique
-        foreach (Collider col in cols)
-            col.enabled = false; // si le bouton est laché on réactive le collider
+        foreach (Collider col in selectedObject.GetComponentsInChildren<Collider>())
+            col.enabled = true; // si le bouton est laché on réactive le collider
 
         hasBeenPlaced.Add(selectedObject); // On se rappele que l'objet à été placé => il ne bouge plus
         
