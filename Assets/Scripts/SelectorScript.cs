@@ -4,6 +4,7 @@ using System.Xml.Schema;
 using Unity.Mathematics;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class SelectorScript : MonoBehaviour
 {
@@ -55,6 +56,11 @@ public class SelectorScript : MonoBehaviour
 
     void removeObject(GameObject selectedObject)
     {
+        StartCoroutine(removeObjectCoroutine(selectedObject));
+    }
+
+    IEnumerator removeObjectCoroutine(GameObject selectedObject)
+    {
         int size = sizeOf;
         for (int i = 0; i < sizeOf;  ++i)
         {
@@ -69,7 +75,9 @@ public class SelectorScript : MonoBehaviour
         }
         if (size <= 0)
         {
+            yield return new WaitForSeconds(2);
             refill();
         }
+        yield return null;
     }
 }
