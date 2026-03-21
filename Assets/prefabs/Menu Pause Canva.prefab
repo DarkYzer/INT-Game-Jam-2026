@@ -680,7 +680,7 @@ MonoBehaviour:
       - m_Target: {fileID: 4576864357719061958}
         m_TargetAssemblyTypeName: SloundSliders, Assembly-CSharp
         m_MethodName: ChangeSfxVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2438,7 +2438,7 @@ MonoBehaviour:
       - m_Target: {fileID: 4576864357719061958}
         m_TargetAssemblyTypeName: SloundSliders, Assembly-CSharp
         m_MethodName: ChangeMusicVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
