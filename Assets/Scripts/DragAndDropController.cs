@@ -1,13 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class DragAndDropController: MonoBehaviour
 {
+    [Header("Score")]
+    public int score;
+    [SerializeField] TextMeshProUGUI scoreText;
+
     [Header("input Actions")]
     public InputActionReference trackingAction;
     public InputActionReference clickingAction;
@@ -40,6 +46,8 @@ public class DragAndDropController: MonoBehaviour
         clickingAction.action.canceled += OnTouchRelease;
         turningAction.action.performed += OnTurn;
         turningAction.action.canceled += OnTurnEnd;
+    
+        scoreText.text = $"Score: {score}";
     }
 
     private void OnDisable()
@@ -61,9 +69,9 @@ public class DragAndDropController: MonoBehaviour
      * =========================================================
      */
 
-    [SerializeField] Vector2 input;
-    [SerializeField] float rotation;
-    [SerializeField] bool isTurning;
+    Vector2 input;
+    float rotation;
+    bool isTurning;
     private void OnTurn(InputAction.CallbackContext context)
     {
         if (selectedObject == null) return;
@@ -126,6 +134,8 @@ public class DragAndDropController: MonoBehaviour
             dragPlane = new Plane(-Camera.main.transform.forward, hit.point);
             offset = selectedObject.position - hit.point;
             objScript = selectedObject.GetComponent<ObjectScript>();
+            if (selectedObject.CompareTag("FixedObject"))
+                selectedObject = null;
         }
         if (selectedObject == null) return;
 
@@ -170,6 +180,9 @@ public class DragAndDropController: MonoBehaviour
 
         selectedObject.gameObject.layer = LayerMask.NameToLayer("PlacedObject");
         // Object de selectionné
-        selectedObject = null;  
+        selectedObject = null;
+        // gestion du score
+        score += 1;
+        scoreText.text = $"Score: {score}";
     }
 }
