@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2342367085018395148}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0.4229, y: -0.5, z: 0.515}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
@@ -145,7 +145,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0.5812418, y: 0.5812418, z: 0}
-  m_LocalScale: {x: 20, y: 0.2, z: 2}
+  m_LocalScale: {x: 24, y: 0.2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8934217547168006417}
@@ -268,7 +268,7 @@ SpringJoint:
   m_Anchor: {x: 0.5, y: 0.5, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 12
+  m_Spring: 10
   m_Damper: 1
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -292,7 +292,7 @@ SpringJoint:
   m_Anchor: {x: -0.5, y: 0.5, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 12
+  m_Spring: 10
   m_Damper: 1
   m_MinDistance: 0
   m_MaxDistance: 0
