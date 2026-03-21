@@ -11,10 +11,15 @@ public class DragAndDropController: MonoBehaviour
     [Header("input Actions")]
     public InputActionReference trackingAction;
     public InputActionReference clickingAction;
+    public InputActionReference turningAction;
     
     [Tooltip("List of objects already placed")] 
     [SerializeField] List<Transform> hasBeenPlaced = new List<Transform>();
     [SerializeField] LayerMask placedObjectLayerMask;
+    [Tooltip("upOffset: offset de decalage vers le haut quand un objet est dans un autre")]
+    [SerializeField] float upOffset;
+    [Tooltip("rotateSpeed: vitesse de rotation des objets")]
+    [SerializeField] float rotateSpeed;
 
     private Transform selectedObject;
     Plane dragPlane;
@@ -28,22 +33,75 @@ public class DragAndDropController: MonoBehaviour
     {
         trackingAction.action.Enable();
         clickingAction.action.Enable();
+        turningAction.action.Enable();
 
         trackingAction.action.performed += OnTouchProsition;
         clickingAction.action.performed += OnTouchPress;
         clickingAction.action.canceled += OnTouchRelease;
+        turningAction.action.performed += OnTurn;
+        turningAction.action.canceled += OnTurnEnd;
     }
 
     private void OnDisable()
     {
         trackingAction.action.performed -= OnTouchProsition;
         clickingAction.action.performed -= OnTouchPress;
-        clickingAction.action.canceled -= OnTouchRelease;  
+        clickingAction.action.canceled -= OnTouchRelease;
+        turningAction.action.performed -= OnTurn;
+        turningAction.action.canceled -= OnTurnEnd;
 
         trackingAction.action.Disable();
         clickingAction.action.Disable();
+        turningAction.action.Disable();
     }
 
+    /* 
+     * =========================================================
+     *                        ROTATION
+     * =========================================================
+     */
+
+    [SerializeField] Vector2 input;
+    [SerializeField] float rotation;
+    [SerializeField] bool isTurning;
+    private void OnTurn(InputAction.CallbackContext context)
+    {
+        if (selectedObject == null) return;
+        isTurning = true;
+        input = context.ReadValue<Vector2>();
+        if (input.x < 0.1f)
+            OnTurnLeft(context);
+        if (input.x > 0.1f)
+            OnTurnRight(context);
+    }
+
+    private void OnTurnEnd(InputAction.CallbackContext context)
+    {
+        rotation = 0;
+        isTurning = false;
+    }
+    private void OnTurnRight(InputAction.CallbackContext context)
+    {
+        rotation = 1 * rotateSpeed;
+    } 
+    private void OnTurnLeft(InputAction.CallbackContext context)
+    {
+        rotation = -1 * rotateSpeed;
+    }
+
+    void Update()
+    {
+        if (selectedObject == null) return;
+
+        if (isTurning)
+            selectedObject.Rotate(0.0f, 0f, rotation, Space.Self);
+    }
+
+    /* 
+     * =========================================================
+     *                       DRAG & DROP
+     * =========================================================
+     */
     Vector2 currentTouchPos;
     public void OnTouchProsition(InputAction.CallbackContext context)
     {
@@ -69,6 +127,7 @@ public class DragAndDropController: MonoBehaviour
             offset = selectedObject.position - hit.point;
             objScript = selectedObject.GetComponent<ObjectScript>();
         }
+        if (selectedObject == null) return;
 
         // si l'objet a déjà été posé il ne bouge plus avec les clics
         if (hasBeenPlaced.Contains(selectedObject)) 
@@ -90,13 +149,12 @@ public class DragAndDropController: MonoBehaviour
 
     public void OnTouchRelease(InputAction.CallbackContext context)
     {
-
+        if (rb == null || col == null || selectedObject == null) return;
         rb.useGravity = true; // si le bouton est laché on réactive la gravité
         rb.isKinematic = false; // il est touché par la phisique
         col.enabled = true; // si le bouton est laché on réactive le collider
     
-        if (selectedObject != null)
-            hasBeenPlaced.Add(selectedObject); // On se rappele que l'objet à été placé => il ne bouge plus
+        hasBeenPlaced.Add(selectedObject); // On se rappele que l'objet à été placé => il ne bouge plus
         
         // Si l'object est dans un autre, on le place plus haut et il tombe
         // on fait un raycast très haut qui pointe vers le bas et on récupère le point de contact (le point le plus haut)
@@ -104,9 +162,10 @@ public class DragAndDropController: MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(rayOrigin, Vector3.down, out hit, Mathf.Infinity, placedObjectLayerMask))
         {
-            if (hit.transform != selectedObject)
+            // si le ray cast touche quelque chose d'autre que nous et de l'objet est plus haut
+            if (hit.transform != selectedObject && hit.transform.position.y > selectedObject.position.y)
                 selectedObject.position = selectedObject.position
-                                        + new Vector3(0, hit.transform.position.y + 1, 0);
+                                        + new Vector3(0, hit.transform.position.y + upOffset, 0);
         } 
 
         selectedObject.gameObject.layer = LayerMask.NameToLayer("PlacedObject");
