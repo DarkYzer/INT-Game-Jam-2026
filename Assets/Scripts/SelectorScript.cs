@@ -61,7 +61,6 @@ public class SelectorScript : MonoBehaviour
             if (myObjects[i] == selectedObject)
             {
                 myObjects[i] = null;
-                print("trouvé");
             }
             if (myObjects[i] == null)
             {
