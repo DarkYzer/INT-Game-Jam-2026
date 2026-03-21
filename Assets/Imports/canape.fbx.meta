@@ -1,39 +1,9 @@
 fileFormatVersion: 2
-guid: 5580228d11e56a140adb1e1348a69305
+guid: 064c14a345e01924b92330bd75c3e3cc
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: e6137f6ef3059e6449a2087068bf020d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: edges
-    second: {fileID: 2100000, guid: 0831024eeecc2c94ab6ecd45b07f04b4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pieds
-    second: {fileID: 2100000, guid: 3109afa7100a26f45b6a1e7dcb5b44a4, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: canape_Bake1_PBR_Diffuse
-    second: {fileID: 2800000, guid: c1dddf9aa351b284b977131cad7ef07d, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: canape_Bake1_PBR_Normal
-    second: {fileID: 2800000, guid: ae722aa3f26e1ea4f9a8b8783151b20c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: canape_Bake1_PBR_Roughness
-    second: {fileID: 2800000, guid: 1c591328dfe011a42af20d69bd8cfa29, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
