@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4873510751802061314}
   - component: {fileID: 7627573428053008852}
   - component: {fileID: 1711159846935693127}
-  - component: {fileID: 3731378990200033920}
+  - component: {fileID: 8737909715511502068}
   m_Layer: 0
   m_Name: carton
   m_TagString: Untagged
@@ -164,7 +164,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3731378990200033920
+--- !u!114 &8737909715511502068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,10 +173,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6552334294094605322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96403e0220d09154d97adfe7645d88c4, type: 3}
+  m_Script: {fileID: 11500000, guid: b3bf38f40efed794c9459cba1562812d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectScript
+  m_EditorClassIdentifier: Assembly-CSharp::CardBoardScript
+  shakeAngle: 20
+  shakeFastTime: 0.1
+  shakeSlowTime: 0.3
   isTrigger: 0
+  maxHits: 3
+  explosionRange: 1
+  explosionStrength: 10
 --- !u!1001 &5808705687903341187
 PrefabInstance:
   m_ObjectHideFlags: 0
