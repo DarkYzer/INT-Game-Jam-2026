@@ -1012,7 +1012,7 @@ PrefabInstance:
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[4]'
       value: 
-      objectReference: {fileID: 4360772750461853154, guid: db92ca43df234534bb2ee99212727ea5, type: 3}
+      objectReference: {fileID: 4789002254899443646, guid: 16a58ccb1ce1c0643a9fc8d9f84ac940, type: 3}
     - target: {fileID: 2602371024402567964, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

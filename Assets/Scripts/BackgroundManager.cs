@@ -1,31 +1,30 @@
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class BackgroundManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] Transform balance;
-    [SerializeField] Transform background;
-    private float smoothSpeed = 5f;
+    [SerializeField] private Transform balance;
+    public float maxOffset = 2000f; // déplacement max en pixels
+    public float maxAngle = 45f;   // angle max attendu
+    public float smoothSpeed = 5f;
+
+    [SerializeField] private RectTransform rectTransform;
+    private float targetX;
 
 
-    private float default_rotation;
-    private Vector3 default_translation;
-    void Start()
-    {
-        default_rotation = balance.rotation.eulerAngles.z;
-        default_translation=background.position;
-    }   
-
-    // Update is called once per frame
     void Update()
     {
-        float offset = (balance.rotation.eulerAngles.z - default_rotation) * 0.1f;
-        Vector3 targetPosition = new Vector3(default_translation.x - offset, default_translation.y, default_translation.z);
+        float angle = balance.eulerAngles.z;
+        if (angle > 180) angle -= 360;
 
-        background.position = Vector3.Lerp(
-            background.position,
-            targetPosition,
-            smoothSpeed * Time.deltaTime);
+
+        float normalized = Mathf.Clamp(angle / maxAngle, -1f, 1f);
+
+        // Calcul position cible
+        targetX = normalized * maxOffset;
+
+        // Smooth movement
+        Vector2 pos = rectTransform.anchoredPosition;
+        pos.x = Mathf.Lerp(pos.x, targetX, Time.deltaTime * smoothSpeed);
+        rectTransform.anchoredPosition = pos;
     }
 }
