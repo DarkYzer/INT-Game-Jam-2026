@@ -1687,23 +1687,34 @@ PrefabInstance:
       objectReference: {fileID: 3187157161344751129}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: spawnableObjects.Array.size
+<<<<<<< Updated upstream
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+=======
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3731378990200033920, guid: 0f6dbb29d7932514c9ddeeb5c8a28c45, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+>>>>>>> Stashed changes
       propertyPath: 'spawnableObjects.Array.data[1]'
       value: 
-      objectReference: {fileID: 2259566586312427436, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
+      objectReference: {fileID: 492952706145380208, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[2]'
       value: 
-      objectReference: {fileID: 4360772750461853154, guid: db92ca43df234534bb2ee99212727ea5, type: 3}
+      objectReference: {fileID: 2618532009450253878, guid: db92ca43df234534bb2ee99212727ea5, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[3]'
       value: 
-      objectReference: {fileID: 2259566586312427436, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
+      objectReference: {fileID: 6304434173025481331, guid: 16a58ccb1ce1c0643a9fc8d9f84ac940, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[4]'
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 4789002254899443646, guid: 16a58ccb1ce1c0643a9fc8d9f84ac940, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[6]'
@@ -1729,6 +1740,13 @@ PrefabInstance:
       propertyPath: 'spawnableObjects.Array.data[11]'
       value: 
       objectReference: {fileID: 6552334294094605322, guid: 0f6dbb29d7932514c9ddeeb5c8a28c45, type: 3}
+=======
+      objectReference: {fileID: 3731378990200033920, guid: 0f6dbb29d7932514c9ddeeb5c8a28c45, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[5]'
+      value: 
+      objectReference: {fileID: 492952706145380208, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
+>>>>>>> Stashed changes
     - target: {fileID: 2602371024402567964, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
