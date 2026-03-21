@@ -22,6 +22,7 @@ public class LivesManager : MonoBehaviour
     {
         lives--;
         StartCoroutine(Remove(other.gameObject));
+        DragAndDropController.Instance.hasBeenPlaced.Remove(other.transform);
         StartCoroutine(Shake());
     }
 
