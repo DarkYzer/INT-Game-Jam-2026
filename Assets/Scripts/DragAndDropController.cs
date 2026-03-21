@@ -1,9 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
-using NUnit.Framework;
-using UnityEditor;
-using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
@@ -179,6 +175,13 @@ public class DragAndDropController: MonoBehaviour
         } 
 
         selectedObject.gameObject.layer = LayerMask.NameToLayer("PlacedObject");
+
+        // fake Object Update
+        foreach (Transform obj in hasBeenPlaced)
+        {
+            obj.GetComponent<ObjectScript>()?.fakeUpdate();
+        }
+
         // Object de selectionné
         selectedObject = null;
         // gestion du score
