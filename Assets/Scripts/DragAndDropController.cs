@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Collections.ObjectModel;
 using Microsoft.VisualBasic;
 using System.Data.SqlTypes;
+using System.Numerics;
 
 public class DragAndDropController: MonoBehaviour
 {
@@ -155,6 +156,11 @@ public class DragAndDropController: MonoBehaviour
                 selectedObject = null;
         }
         if (selectedObject == null) return;
+        selectedObject.position = new Vector3(
+            selectedObject.position.x,
+            selectedObject.position.y,
+            0
+        );
 
         // si l'objet a déjà été posé il ne bouge plus avec les clics
         if (hasBeenPlaced.Contains(selectedObject)) 
