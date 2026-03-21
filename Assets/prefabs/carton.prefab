@@ -14,7 +14,11 @@ GameObject:
   - component: {fileID: 4873510751802061314}
   - component: {fileID: 7627573428053008852}
   - component: {fileID: 1711159846935693127}
+<<<<<<< HEAD
   - component: {fileID: 1441647836671936210}
+=======
+  - component: {fileID: 8737909715511502068}
+>>>>>>> 78178fe31e899193388cb062318da6eeedd09e08
   m_Layer: 0
   m_Name: carton
   m_TagString: Untagged
@@ -164,7 +168,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &1441647836671936210
+=======
+--- !u!114 &8737909715511502068
+>>>>>>> 78178fe31e899193388cb062318da6eeedd09e08
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +188,11 @@ MonoBehaviour:
   shakeFastTime: 0.1
   shakeSlowTime: 0.3
   isTrigger: 0
+<<<<<<< HEAD
   maxHits: 5
+=======
+  maxHits: 3
+>>>>>>> 78178fe31e899193388cb062318da6eeedd09e08
   explosionRange: 1
   explosionStrength: 10
 --- !u!1001 &5808705687903341187
