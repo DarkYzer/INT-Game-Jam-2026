@@ -165,7 +165,7 @@ public class DragAndDropController: MonoBehaviour
         // --- On récupère le collider et le rigid body --- //
         rb = selectedObject.GetComponent<Rigidbody>();
         // on récupère le collider pas trigger
-        foreach (Collider col in selectedObject.GetComponents<Collider>())
+        foreach (Collider col in selectedObject.GetComponentsInChildren<Collider>())
         {
             col.enabled = true;
             if (col.isTrigger)
