@@ -1686,21 +1686,85 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3187157161344751129}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      propertyPath: spawnableObjects.Array.size
+<<<<<<< Updated upstream
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+=======
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3731378990200033920, guid: 0f6dbb29d7932514c9ddeeb5c8a28c45, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+>>>>>>> Stashed changes
+=======
+>>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
+=======
+>>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
+=======
+>>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
       propertyPath: 'spawnableObjects.Array.data[1]'
       value: 
-      objectReference: {fileID: 2259566586312427436, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
+      objectReference: {fileID: 492952706145380208, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[2]'
       value: 
-      objectReference: {fileID: 4360772750461853154, guid: db92ca43df234534bb2ee99212727ea5, type: 3}
+      objectReference: {fileID: 2618532009450253878, guid: db92ca43df234534bb2ee99212727ea5, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[3]'
       value: 
-      objectReference: {fileID: 2259566586312427436, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
+      objectReference: {fileID: 6304434173025481331, guid: 16a58ccb1ce1c0643a9fc8d9f84ac940, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[4]'
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 4789002254899443646, guid: 16a58ccb1ce1c0643a9fc8d9f84ac940, type: 3}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[6]'
+      value: 
+      objectReference: {fileID: 9196220743670091595, guid: bce4fa92319565c498a7e190376364bb, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[7]'
+      value: 
+      objectReference: {fileID: 9196220743670091595, guid: 2f95f64e4dc2ae84ca23b75310bcb513, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[8]'
+      value: 
+      objectReference: {fileID: 2435229178674783395, guid: 8212a727836392d4e9a110562f76b67f, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[9]'
+      value: 
+      objectReference: {fileID: 681029119241094136, guid: f8e6169830489d54fbb27aa9bd55d355, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[10]'
+      value: 
+      objectReference: {fileID: 3514778368956699796, guid: f8b41edf6c9109847bf2eeb92ab20b0a, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[11]'
+      value: 
+      objectReference: {fileID: 6552334294094605322, guid: 0f6dbb29d7932514c9ddeeb5c8a28c45, type: 3}
+=======
+      objectReference: {fileID: 3731378990200033920, guid: 0f6dbb29d7932514c9ddeeb5c8a28c45, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[5]'
+      value: 
+      objectReference: {fileID: 492952706145380208, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
+>>>>>>> Stashed changes
+=======
+>>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
+=======
+>>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
+=======
+>>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
     - target: {fileID: 2602371024402567964, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

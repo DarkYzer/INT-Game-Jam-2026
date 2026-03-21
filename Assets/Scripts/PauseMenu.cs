@@ -10,12 +10,12 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void PauseGame(){
-        Time.timeScale=0; //pauser le temps ? ne fonctionne pas actuellement
+        Time.timeScale=0; //pauser le temps
         //l'écran devrait empêcher le joueur de bouger des objets
     }
 
     public void ResumeGame(){
-        Time.timeScale=1; //relancer le temps ? ne fonctionne pas actuellement
+        Time.timeScale=1; //relancer le temps
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
