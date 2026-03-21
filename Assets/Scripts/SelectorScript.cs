@@ -4,6 +4,7 @@ using System.Xml.Schema;
 using Unity.Mathematics;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class SelectorScript : MonoBehaviour
 {
@@ -47,13 +48,18 @@ public class SelectorScript : MonoBehaviour
                     exploredObjects[explorer] = 1;
                     myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPoints[i].transform.position, Quaternion.identity);
                     myObjects[i].SetActive(true);
-                    myObjects[i].GetComponent<Collider>().enabled = false;
+                    // myObjects[i].GetComponent<Collider>().enabled = false;
                 }
             }
         }
     }
 
     void removeObject(GameObject selectedObject)
+    {
+        StartCoroutine(removeObjectCoroutine(selectedObject));
+    }
+
+    IEnumerator removeObjectCoroutine(GameObject selectedObject)
     {
         int size = sizeOf;
         for (int i = 0; i < sizeOf;  ++i)
@@ -69,7 +75,9 @@ public class SelectorScript : MonoBehaviour
         }
         if (size <= 0)
         {
+            yield return new WaitForSeconds(2);
             refill();
         }
+        yield return null;
     }
 }
