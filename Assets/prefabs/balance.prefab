@@ -271,7 +271,7 @@ SpringJoint:
   m_Spring: 12
   m_Damper: 1
   m_MinDistance: 0
-  m_MaxDistance: 1
+  m_MaxDistance: 0
   m_Tolerance: 0.025
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -295,7 +295,7 @@ SpringJoint:
   m_Spring: 12
   m_Damper: 1
   m_MinDistance: 0
-  m_MaxDistance: 1
+  m_MaxDistance: 0
   m_Tolerance: 0.025
   m_BreakForce: Infinity
   m_BreakTorque: Infinity

@@ -18,6 +18,7 @@ public class CardBoardScript : ObjectScript
     private void exploding()
     {
         Destroy(gameObject);
+        DragAndDropController.Instance.hasBeenPlaced.Remove(transform);
         // Créer particule
         // mouvement d'expolsion
         RaycastHit[] hitsRange;

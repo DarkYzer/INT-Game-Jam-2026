@@ -4,9 +4,20 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.Events;
+using System.Drawing;
 
 public class DragAndDropController: MonoBehaviour
 {
+    public static DragAndDropController Instance;
+
+    public void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+    } 
+
     [Header("Score")]
     public int score;
     [SerializeField] TextMeshProUGUI scoreText;
@@ -17,7 +28,7 @@ public class DragAndDropController: MonoBehaviour
     public InputActionReference turningAction;
     
     [Tooltip("List of objects already placed")] 
-    [SerializeField] List<Transform> hasBeenPlaced = new List<Transform>();
+    public List<Transform> hasBeenPlaced = new List<Transform>();
     [SerializeField] LayerMask placedObjectLayerMask;
     [Tooltip("upOffset: offset de decalage vers le haut quand un objet est dans un autre")]
     [SerializeField] float upOffset;
@@ -184,9 +195,11 @@ public class DragAndDropController: MonoBehaviour
         selectedObject.gameObject.layer = LayerMask.NameToLayer("PlacedObject");
 
         // fake Object Update
-        foreach (Transform obj in hasBeenPlaced)
+        int size = hasBeenPlaced.length;
+        for (int i = 0; i < size; i++)
         {
-            obj.GetComponent<ObjectScript>()?.fakeUpdate();
+            obj?.GetComponent<ObjectScript>()?.fakeUpdate();
+            size = hasBeenPlaced.length;
         }
 
         // Object de selectionné
