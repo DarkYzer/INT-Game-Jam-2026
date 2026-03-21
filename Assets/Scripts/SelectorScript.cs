@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 public class SelectorScript : MonoBehaviour
 {
+    [SerializeField] DragAndDropController dragNdropController; // The drag n drop controller
+
     // Number of items selectable
     int sizeOf;
     [SerializeField] GameObject[] spawnPoints; // Spawn points of the objects
@@ -20,6 +22,8 @@ public class SelectorScript : MonoBehaviour
     {
         sizeOf = spawnPoints.Length;
         myObjects = new GameObject[sizeOf];
+        dragNdropController.OnPick.AddListener(removeObject);
+
         refill();
     }
 
@@ -43,8 +47,30 @@ public class SelectorScript : MonoBehaviour
                     exploredObjects[explorer] = 1;
                     myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPoints[i].transform.position, Quaternion.identity);
                     myObjects[i].SetActive(true);
+                    myObjects[i].GetComponent<Collider>().enabled = false;
                 }
             }
+        }
+    }
+
+    void removeObject(GameObject selectedObject)
+    {
+        int size = sizeOf;
+        for (int i = 0; i < sizeOf;  ++i)
+        {
+            if (myObjects[i] == selectedObject)
+            {
+                myObjects[i] = null;
+                print("trouvé");
+            }
+            if (myObjects[i] == null)
+            {
+                size--;
+            }
+        }
+        if (size <= 0)
+        {
+            refill();
         }
     }
 }
