@@ -15,6 +15,7 @@ public class LivesManager : MonoBehaviour
     [SerializeField] private float shakeDuration;
     [SerializeField] private float shakeStrength;
     [SerializeField] private AnimationCurve curve;
+    [SerializeField] private GameObject balance;
 
     private void Start()
     {
