@@ -99,22 +99,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LivesManager
   lives: 3
-  shakeDuration: 2
+  shakeDuration: 1
+  shakeStrength: 0.2
   curve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.0000013532117
-      value: -0.0009514601
-      inSlope: 20.568829
-      outSlope: 20.568829
+      time: -0.0011610212
+      value: -0.0034539015
+      inSlope: 8.529818
+      outSlope: 8.529818
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.03350774
+      outWeight: 0.04487296
     - serializedVersion: 3
-      time: 0.20983769
-      value: 0.73667103
+      time: 0.39437747
+      value: 0.76520497
       inSlope: -3.1138396
       outSlope: -3.1138396
       tangentMode: 0

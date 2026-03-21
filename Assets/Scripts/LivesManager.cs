@@ -9,6 +9,7 @@ public class LivesManager : MonoBehaviour
     private Vector3 _shakeDirection;
     private bool _shouldShake;
     [SerializeField] private float shakeDuration;
+    [SerializeField] private float shakeStrength;
     [SerializeField] private AnimationCurve curve;
 
     private void Start()
@@ -19,6 +20,8 @@ public class LivesManager : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        if (other.isTrigger) return;
+        Debug.Log("hehehe");
         lives--;
         StartCoroutine(Remove(other.gameObject));
         StartCoroutine(Shake());
@@ -30,7 +33,7 @@ public class LivesManager : MonoBehaviour
         while (time < shakeDuration)
         {
             time += Time.deltaTime;
-            var strength = curve.Evaluate(time / shakeDuration);
+            var strength = curve.Evaluate(time / shakeDuration) * shakeStrength;
             if (_shakeDirection.magnitude == 0) _shakeDirection = Random.insideUnitSphere;
             _mainCamera.transform.position += _shakeDirection * strength;
             yield return null;
