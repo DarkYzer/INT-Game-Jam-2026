@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: cloud
-    second: {fileID: 2100000, guid: fa78193fc80a4484eb73d6f64f6532b4, type: 2}
+    second: {fileID: 2100000, guid: 18a7c85e8b7a79e4c83fb6aea994ee4c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -33,57 +33,52 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: clouds_Bake1_PBR_Diffuse
-    second: {fileID: 2800000, guid: 51bcab0647564b6409e5cfc6dcc8b935, type: 3}
+    second: {fileID: 2800000, guid: fb0ccfd9fa53c26498138ba0a5dd8682, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: clouds_Bake1_PBR_Roughness
-    second: {fileID: 2800000, guid: ad7c9965036a95e47a68edbd601dd182, type: 3}
+    second: {fileID: 2800000, guid: d5dd02a7c00b13a41a0144013440987a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: cone_Bake1_PBR_Diffuse.1001
-    second: {fileID: 2800000, guid: 64a82731970c89b428f7992ddd44614c, type: 3}
+    second: {fileID: 2800000, guid: 2c72d059d2de65c4babca7636aac25a7, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: cone_Bake1_PBR_Normal.1001
-    second: {fileID: 2800000, guid: 6e7d34a57204f8341b0325f9731bb206, type: 3}
+    second: {fileID: 2800000, guid: 600798e0691ee6f4cb9e57cf436ff921, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: cone_Bake1_PBR_Roughness.1001
-    second: {fileID: 2800000, guid: 0159a71c7fc56d54e95b0e589c313d5a, type: 3}
+    second: {fileID: 2800000, guid: 10b32a9655d19fc449305846fe48e437, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: screen_Bake1_PBR_Diffuse.1001
-    second: {fileID: 2800000, guid: c77f3d3d31ab842428382419fcc70f81, type: 3}
+    second: {fileID: 2800000, guid: 69ee72b638dc29c4ca381f6334b90cfd, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: screen_Bake1_PBR_Metalness.1001
-    second: {fileID: 2800000, guid: 1fb64585148902e4cbbc8d7658c213e9, type: 3}
+    second: {fileID: 2800000, guid: 49990eac6de221d44ab548a81beed1ff, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: screen_Bake1_PBR_Normal.1001
-    second: {fileID: 2800000, guid: a09a5fdacb187274b8d2802cbef95704, type: 3}
+    second: {fileID: 2800000, guid: f83a1b002d786c3489a4c70e92cc7b72, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: screen_Bake1_PBR_Roughness.1001
-    second: {fileID: 2800000, guid: dffdc77fb3c97714181aefe53961238d, type: 3}
+    second: {fileID: 2800000, guid: bbecb5eef51f7264aa4659fa5770c4ff, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: visage_Bake1_PBR_Alpha
-    second: {fileID: 2800000, guid: b77abc15b19bc58488db6537e907b680, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: visage_Bake1_PBR_Diffuse
-    second: {fileID: 2800000, guid: e516afd868c906148849326849805c11, type: 3}
+      name: visage
+    second: {fileID: 2800000, guid: 95d09fde52a64a14c83cda8159d869c2, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
