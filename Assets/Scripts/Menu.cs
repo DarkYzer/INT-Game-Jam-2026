@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
 
     public void LoadGame() {
         //pour le bouton play, lance la scene du jeu
+        Time.timeScale=1;
         SceneManager.LoadScene("1stBuild");
     }
 
