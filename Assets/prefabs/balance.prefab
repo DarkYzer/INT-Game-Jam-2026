@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2575549532911263758}
   - component: {fileID: 2037798962296453004}
   - component: {fileID: 6178873583967623008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: balance
-  m_TagString: Untagged
+  m_TagString: FixedObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 1669332831291697576}
   - component: {fileID: 8801635603517567392}
   - component: {fileID: 340664435844883945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: planche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ SpringJoint:
   m_Spring: 12
   m_Damper: 1
   m_MinDistance: 0
-  m_MaxDistance: 1
+  m_MaxDistance: 0
   m_Tolerance: 0.025
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -295,7 +295,7 @@ SpringJoint:
   m_Spring: 12
   m_Damper: 1
   m_MinDistance: 0
-  m_MaxDistance: 1
+  m_MaxDistance: 0
   m_Tolerance: 0.025
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
