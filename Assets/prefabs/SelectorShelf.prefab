@@ -1687,6 +1687,7 @@ PrefabInstance:
       objectReference: {fileID: 3187157161344751129}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
       propertyPath: spawnableObjects.Array.size
 <<<<<<< Updated upstream
       value: 11
@@ -1701,6 +1702,8 @@ PrefabInstance:
       objectReference: {fileID: 3731378990200033920, guid: 0f6dbb29d7932514c9ddeeb5c8a28c45, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
 =======
 >>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
       propertyPath: 'spawnableObjects.Array.data[1]'
@@ -1719,6 +1722,7 @@ PrefabInstance:
       value: 
 <<<<<<< Updated upstream
       objectReference: {fileID: 4789002254899443646, guid: 16a58ccb1ce1c0643a9fc8d9f84ac940, type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[6]'
@@ -1751,6 +1755,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 492952706145380208, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
 =======
 >>>>>>> parent of 49f579b (Merge branch 'main' of https://github.com/DarkYzer/INT-Game-Jam-2026)
     - target: {fileID: 2602371024402567964, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
