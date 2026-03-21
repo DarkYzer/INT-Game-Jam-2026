@@ -4,13 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.Events;
-using System.Drawing;
-using System.Xml.Linq;
-using System.Runtime.InteropServices;
-using System.Collections.ObjectModel;
-using Microsoft.VisualBasic;
-using System.Data.SqlTypes;
-using System.Numerics;
 
 public class DragAndDropController: MonoBehaviour
 {
