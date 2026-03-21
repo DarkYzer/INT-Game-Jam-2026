@@ -1,12 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
-using NUnit.Framework;
-using UnityEditor;
-using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.Events;
 
 public class DragAndDropController: MonoBehaviour
 {
@@ -34,6 +31,8 @@ public class DragAndDropController: MonoBehaviour
 
     private Rigidbody rb;
     private Collider col; // le collider pas trigger
+
+    public UnityEvent<GameObject> OnPick; // Event qui renvoie l'objet lorsqu'on clique dessus
 
     private void OnEnable()
     {
@@ -97,6 +96,8 @@ public class DragAndDropController: MonoBehaviour
         rotation = -1 * rotateSpeed;
     }
 
+
+
     void Update()
     {
         if (selectedObject == null) return;
@@ -155,6 +156,8 @@ public class DragAndDropController: MonoBehaviour
         rb.useGravity = false; // si le bouton est pressé on désactive la gravité
         rb.isKinematic = true; // il n'est pas touché par la phisique
         col.enabled = false; // si le bouton est pressé on désactive le collider
+
+        OnPick.Invoke(selectedObject.gameObject);
     }
 
     public void OnTouchRelease(InputAction.CallbackContext context)
@@ -179,6 +182,13 @@ public class DragAndDropController: MonoBehaviour
         } 
 
         selectedObject.gameObject.layer = LayerMask.NameToLayer("PlacedObject");
+
+        // fake Object Update
+        foreach (Transform obj in hasBeenPlaced)
+        {
+            obj.GetComponent<ObjectScript>()?.fakeUpdate();
+        }
+
         // Object de selectionné
         selectedObject = null;
         // gestion du score
