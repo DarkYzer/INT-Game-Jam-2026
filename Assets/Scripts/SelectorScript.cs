@@ -5,6 +5,8 @@ using Unity.Mathematics;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using TMPro;
+using TMPro.Examples;
 
 public class SelectorScript : MonoBehaviour
 {
@@ -17,6 +19,9 @@ public class SelectorScript : MonoBehaviour
     [SerializeField] List<GameObject> spawnableObjects; // List of objects that could be selectable
     GameObject[] myObjects; // List of available objects
 
+    [SerializeField] List<TextMeshProUGUI> weightTexts; // List of weights
+
+    private bool readyToDrop = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,17 +52,41 @@ public class SelectorScript : MonoBehaviour
                 {
                     exploredObjects[explorer] = 1;
                     myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPoints[i].transform.position, Quaternion.identity);
+                    myObjects[i].transform.parent = gameObject.transform;
                     myObjects[i].SetActive(true);
-                    // myObjects[i].GetComponent<Collider>().enabled = false;
+                    weightTexts[i].text = myObjects[i].GetComponent<Rigidbody>().mass.ToString() + " kg";
                 }
             }
         }
     }
 
+    void dropRandom()
+    {
+        while (true)
+        {
+
+        }
+    }
+
+    void drop(GameObject droppedObject)
+    {
+        return;
+    }
+
     void removeObject(GameObject selectedObject)
     {
         StartCoroutine(removeObjectCoroutine(selectedObject));
+        StopCoroutine(timerToDrop());
+        StartCoroutine(timerToDrop());
     }
+    IEnumerator timerToDrop()
+    {
+        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
+        dropRandom();
+    }
+
 
     IEnumerator removeObjectCoroutine(GameObject selectedObject)
     {
@@ -67,6 +96,7 @@ public class SelectorScript : MonoBehaviour
             if (myObjects[i] == selectedObject)
             {
                 myObjects[i] = null;
+                weightTexts[i].text = "";
             }
             if (myObjects[i] == null)
             {

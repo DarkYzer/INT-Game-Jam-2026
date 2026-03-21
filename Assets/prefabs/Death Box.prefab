@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5407082921816148814}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalPosition: {x: 0, y: -2.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59,8 +59,8 @@ Transform:
   m_GameObject: {fileID: 5437068235093532251}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 30, y: 3, z: 1}
+  m_LocalPosition: {x: 0, y: -16.04, z: 0}
+  m_LocalScale: {x: 30, y: 28.49, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 685640624022631355}
@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a0604d5b1875d4599a9e76731a45df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LivesManager
-  lives: 3
   shakeDuration: 1
   shakeStrength: 0.2
   curve:
@@ -134,3 +133,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  heartList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  emptyHeart: {fileID: 21300000, guid: 0decfd5673252874f9f7c7dcf99f28df, type: 3}
+  fullHeart: {fileID: 21300000, guid: 6d4993f9e1f753348a53a9ba52c426f4, type: 3}
