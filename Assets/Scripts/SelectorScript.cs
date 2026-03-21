@@ -18,6 +18,7 @@ public class SelectorScript : MonoBehaviour
 
     [SerializeField] List<GameObject> spawnableObjects; // List of objects that could be selectable
     GameObject[] myObjects; // List of available objects
+    [SerializeField] List<int> probaTable;
 
     [SerializeField] List<TextMeshProUGUI> weightTexts; // List of weights
 
