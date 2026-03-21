@@ -215,9 +215,14 @@ public class DragAndDropController: MonoBehaviour
         // Object de selectionné
         selectedObject = null;
         // gestion du score
-        score += 1;
-        scoreText.text = $"Score: {score}";
+        updateScore(1);
 
         cols.Clear();
+    }
+
+    void updateScore(int scoreChange)
+    {
+        score += scoreChange;
+        scoreText.text = $"Score: {score}";
     }
 }
