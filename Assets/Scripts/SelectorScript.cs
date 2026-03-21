@@ -64,7 +64,7 @@ public class SelectorScript : MonoBehaviour
     {
         while (true)
         {
-
+            break;
         }
     }
 
@@ -95,7 +95,6 @@ public class SelectorScript : MonoBehaviour
         {
             if (myObjects[i] == selectedObject)
             {
-                myObjects[i].transform.parent = null;
                 myObjects[i] = null;
                 weightTexts[i].text = "";
             }

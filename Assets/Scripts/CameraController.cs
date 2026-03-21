@@ -4,11 +4,11 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
-    Transform cam;
+    Camera cam;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        cam = GetComponent<Transform>();
+        cam = GetComponentInParent<Camera>();
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
         if (cam != null)
         {
             float scroll = Mouse.current.scroll.ReadValue().y;
-            cam.position += new Vector3(0, scroll,0) *0.2f;
+            cam.fieldOfView -= scroll * 0.5f;
         }
     }
 }

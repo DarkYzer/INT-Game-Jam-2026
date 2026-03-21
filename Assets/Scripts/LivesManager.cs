@@ -1,9 +1,13 @@
+using System.Collections.Generic;
 using System.Collections;
+using System.Reflection;
+using System.Security;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LivesManager : MonoBehaviour
 {
-    public int lives = 3;
+    public static int lives = 3;
     private Camera _mainCamera;
     private Vector3 _cameraStartPosition;
     private Vector3 _shakeDirection;
@@ -21,7 +25,7 @@ public class LivesManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.isTrigger) return;
-        lives--;
+        StartCoroutine(livesUpdate());
         StartCoroutine(Remove(other.gameObject));
         DragAndDropController.Instance.hasBeenPlaced.Remove(other.transform);
         StartCoroutine(Shake());
@@ -49,4 +53,37 @@ public class LivesManager : MonoBehaviour
         yield return new WaitForSeconds(2);
         Destroy(go);
     }
+
+    // ===== Gestion des coeurs ===== //
+    [SerializeField] List<Image> heartList;
+    [SerializeField] Sprite emptyHeart;
+    [SerializeField] Sprite fullHeart;
+
+    void Update()
+    {
+        Debug.Log(canTakeDamage);
+    }
+
+    bool canTakeDamage = true;
+    IEnumerator livesUpdate()
+    {
+        if (canTakeDamage) lives--;;
+        canTakeDamage = false;
+        for (int i = 0; i < heartList.Count; i++)
+        {
+            if (lives <= i)
+            {
+                heartList[i].sprite = emptyHeart;
+                heartList[i].color = Color.black;
+            }
+            else
+            {
+                heartList[i].sprite = fullHeart;
+                heartList[i].color = Color.white;
+            }
+        }
+        yield return new WaitForSeconds(1f);
+        canTakeDamage = true;
+    }
+
 }
