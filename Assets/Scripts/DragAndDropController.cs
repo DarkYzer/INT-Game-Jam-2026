@@ -5,6 +5,11 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.Events;
 using System.Drawing;
+using System.Xml.Linq;
+using System.Runtime.InteropServices;
+using System.Collections.ObjectModel;
+using Microsoft.VisualBasic;
+using System.Data.SqlTypes;
 
 public class DragAndDropController: MonoBehaviour
 {
@@ -35,13 +40,13 @@ public class DragAndDropController: MonoBehaviour
     [Tooltip("rotateSpeed: vitesse de rotation des objets")]
     [SerializeField] float rotateSpeed;
 
-    private Transform selectedObject;
+    public Transform selectedObject;
     Plane dragPlane;
     Vector3 offset;
     private ObjectScript objScript;
 
     private Rigidbody rb;
-    private Collider col; // le collider pas trigger
+    public List<Collider> cols = new List<Collider>(); // le collider pas trigger
 
     public UnityEvent<GameObject> OnPick; // Event qui renvoie l'objet lorsqu'on clique dessus
 
@@ -160,24 +165,29 @@ public class DragAndDropController: MonoBehaviour
         // --- On récupère le collider et le rigid body --- //
         rb = selectedObject.GetComponent<Rigidbody>();
         // on récupère le collider pas trigger
-        col = selectedObject.GetComponents<Collider>()[0];
-        if (col.isTrigger == true)
-            col = selectedObject.GetComponents<Collider>()[1];
+        foreach (Collider col in selectedObject.GetComponents<Collider>())
+        {
+            col.enabled = true;
+            if (col.isTrigger)
+                cols.Add(col);
+        }
 
         rb.useGravity = false; // si le bouton est pressé on désactive la gravité
         rb.isKinematic = true; // il n'est pas touché par la phisique
-        col.enabled = false; // si le bouton est pressé on désactive le collider
+        foreach (Collider col in cols)
+            col.enabled = false; // si le bouton est pressé on désactive le collider
 
         OnPick.Invoke(selectedObject.gameObject);
     }
 
     public void OnTouchRelease(InputAction.CallbackContext context)
     {
-        if (rb == null || col == null || selectedObject == null) return;
+        if (rb == null || selectedObject == null) return;
         rb.useGravity = true; // si le bouton est laché on réactive la gravité
         rb.isKinematic = false; // il est touché par la phisique
-        col.enabled = true; // si le bouton est laché on réactive le collider
-    
+        foreach (Collider col in cols)
+            col.enabled = false; // si le bouton est laché on réactive le collider
+
         hasBeenPlaced.Add(selectedObject); // On se rappele que l'objet à été placé => il ne bouge plus
         
         // Si l'object est dans un autre, on le place plus haut et il tombe
@@ -207,5 +217,7 @@ public class DragAndDropController: MonoBehaviour
         // gestion du score
         score += 1;
         scoreText.text = $"Score: {score}";
+
+        cols.Clear();
     }
 }
