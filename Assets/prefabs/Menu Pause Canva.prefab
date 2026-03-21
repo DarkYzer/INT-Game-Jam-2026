@@ -748,8 +748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.2901961}
-  m_RaycastTarget: 1
+  m_Color: {r: 0, g: 0, b: 0, a: 0.56078434}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1127,6 +1127,7 @@ GameObject:
   - component: {fileID: 323033543550428579}
   - component: {fileID: 5543848698621320830}
   - component: {fileID: 6802739884833708868}
+  - component: {fileID: 4576864357719061958}
   m_Layer: 5
   m_Name: Menu Pause Canva
   m_TagString: Untagged
@@ -1232,6 +1233,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   MenuPause: {fileID: 2405953900693558619}
+--- !u!114 &4576864357719061958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367282115172187652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d0a8b1bfbd58c45b924a759590cd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SloundSliders
+  audioMixer: {fileID: 0}
+  sfxSlider: {fileID: 53043500386214530}
+  musicSlider: {fileID: 1472840223538663105}
 --- !u!1 &4561102979237043261
 GameObject:
   m_ObjectHideFlags: 0
