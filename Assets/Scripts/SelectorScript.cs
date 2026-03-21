@@ -5,6 +5,8 @@ using Unity.Mathematics;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using TMPro;
+using TMPro.Examples;
 
 public class SelectorScript : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class SelectorScript : MonoBehaviour
 
     [SerializeField] List<GameObject> spawnableObjects; // List of objects that could be selectable
     GameObject[] myObjects; // List of available objects
+
+    [SerializeField] List<TextMeshProUGUI> weightTexts; // List of weights
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,7 +52,7 @@ public class SelectorScript : MonoBehaviour
                     exploredObjects[explorer] = 1;
                     myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPoints[i].transform.position, Quaternion.identity);
                     myObjects[i].SetActive(true);
-                    // myObjects[i].GetComponent<Collider>().enabled = false;
+                    weightTexts[i].text = myObjects[i].GetComponent<Rigidbody>().mass.ToString() + " kg";
                 }
             }
         }
@@ -67,6 +71,7 @@ public class SelectorScript : MonoBehaviour
             if (myObjects[i] == selectedObject)
             {
                 myObjects[i] = null;
+                weightTexts[i].text = "";
             }
             if (myObjects[i] == null)
             {
