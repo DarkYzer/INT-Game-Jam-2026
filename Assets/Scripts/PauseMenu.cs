@@ -1,13 +1,12 @@
 using UnityEngine;
-//using Time;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject MenuPause;
 
-    public void ExitGame(){
-        //ferme le jeu correctement ?
-        Application.Quit();
+    public void BackToMenu(){
+        SceneManager.LoadScene("Nocty");
     }
 
     public void PauseGame(){
