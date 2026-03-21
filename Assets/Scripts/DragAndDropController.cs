@@ -8,7 +8,7 @@ using System.Drawing;
 
 public class DragAndDropController: MonoBehaviour
 {
-    public static DragAndDropController Instance;
+    public static DragAndDropController Instance {get; private set;}
 
     public void Awake()
     {
@@ -195,11 +195,11 @@ public class DragAndDropController: MonoBehaviour
         selectedObject.gameObject.layer = LayerMask.NameToLayer("PlacedObject");
 
         // fake Object Update
-        int size = hasBeenPlaced.length;
+        int size = hasBeenPlaced.Count;
         for (int i = 0; i < size; i++)
         {
-            obj?.GetComponent<ObjectScript>()?.fakeUpdate();
-            size = hasBeenPlaced.length;
+            hasBeenPlaced[i]?.GetComponent<ObjectScript>()?.fakeUpdate();
+            size = hasBeenPlaced.Count;
         }
 
         // Object de selectionné
