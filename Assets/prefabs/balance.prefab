@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2db2717cb64db2408d918fe0a2c7cb8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.0994503
+      value: 1.3518841
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2db2717cb64db2408d918fe0a2c7cb8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -268,7 +268,7 @@ SpringJoint:
   m_Anchor: {x: 0, y: 0, z: -4.5}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 10
+  m_Spring: 12
   m_Damper: 1
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -292,7 +292,7 @@ SpringJoint:
   m_Anchor: {x: 0, y: 0, z: 4.5}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 10
+  m_Spring: 12
   m_Damper: 1
   m_MinDistance: 0
   m_MaxDistance: 0
