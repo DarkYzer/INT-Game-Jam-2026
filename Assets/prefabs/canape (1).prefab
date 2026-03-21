@@ -177,6 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96403e0220d09154d97adfe7645d88c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectScript
+  shakeAngle: 20
+  shakeFastTime: 0.1
+  shakeSlowTime: 0.3
   isTrigger: 0
 --- !u!54 &5343928478788821844
 Rigidbody:
