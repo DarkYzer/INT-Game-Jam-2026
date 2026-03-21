@@ -61,9 +61,9 @@ public class DragAndDropController: MonoBehaviour
      * =========================================================
      */
 
-    [SerializeField] Vector2 input;
-    [SerializeField] float rotation;
-    [SerializeField] bool isTurning;
+    Vector2 input;
+    float rotation;
+    bool isTurning;
     private void OnTurn(InputAction.CallbackContext context)
     {
         if (selectedObject == null) return;
@@ -126,6 +126,8 @@ public class DragAndDropController: MonoBehaviour
             dragPlane = new Plane(-Camera.main.transform.forward, hit.point);
             offset = selectedObject.position - hit.point;
             objScript = selectedObject.GetComponent<ObjectScript>();
+            if (selectedObject.CompareTag("FixedObject"))
+                selectedObject = null;
         }
         if (selectedObject == null) return;
 
