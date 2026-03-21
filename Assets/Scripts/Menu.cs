@@ -5,9 +5,10 @@ public class Menu : MonoBehaviour
 {
 
     [SerializeField] GameObject Settings;
+
     public void LoadGame() {
         //pour le bouton play, lance la scene du jeu
-        //SceneManager.LoadScene("???");
+        SceneManager.LoadScene("!FinalScnee");
     }
 
     public void ExitGame(){
@@ -15,16 +16,11 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Settings.SetActive(false);
+        Settings.SetActive(false); //cacher le menu d'options
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }
