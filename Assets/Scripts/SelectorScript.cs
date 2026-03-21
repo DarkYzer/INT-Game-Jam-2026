@@ -64,7 +64,7 @@ public class SelectorScript : MonoBehaviour
     {
         while (true)
         {
-
+            break;
         }
     }
 
