@@ -102,7 +102,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2259566586312427436}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 763e3e2abec59d24288bee8371c0e42d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -150,7 +150,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2259566586312427436}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 763e3e2abec59d24288bee8371c0e42d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -176,6 +176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96403e0220d09154d97adfe7645d88c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectScript
+  shakeAngle: 20
+  shakeFastTime: 0.1
+  shakeSlowTime: 0.3
   isTrigger: 0
 --- !u!1001 &7541734381916536984
 PrefabInstance:

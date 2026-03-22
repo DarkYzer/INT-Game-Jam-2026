@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5966754572125746594}
   - component: {fileID: 7216401120936524236}
   - component: {fileID: 8725163870793628661}
+  - component: {fileID: 8970267311235129172}
   m_Layer: 0
   m_Name: HEHEHE die
   m_TagString: Untagged
@@ -139,3 +140,30 @@ MonoBehaviour:
   - {fileID: 0}
   emptyHeart: {fileID: 21300000, guid: 0decfd5673252874f9f7c7dcf99f28df, type: 3}
   fullHeart: {fileID: 21300000, guid: 6d4993f9e1f753348a53a9ba52c426f4, type: 3}
+--- !u!54 &8970267311235129172
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437068235093532251}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
