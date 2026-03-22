@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class LivesManager : MonoBehaviour
 {
-    public static int lives = 3;
+    public static int lives = 5;
     private Camera _mainCamera;
     private Vector3 _cameraStartPosition;
     private Vector3 _shakeDirection;
@@ -23,7 +23,7 @@ public class LivesManager : MonoBehaviour
     private void Start()
     {
         _mainCamera = Camera.main;
-        lives = 3;
+        lives = 5;
         if (_mainCamera) _cameraStartPosition = _mainCamera.transform.position;
     }
     
