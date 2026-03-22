@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7627573428053008852}
   - component: {fileID: 1711159846935693127}
   - component: {fileID: 3731378990200033920}
+  - component: {fileID: 6110722679368314588}
   m_Layer: 0
   m_Name: carton
   m_TagString: Untagged
@@ -176,7 +177,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96403e0220d09154d97adfe7645d88c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectScript
+  shakeAngle: 20
+  shakeFastTime: 0.1
+  shakeSlowTime: 0.3
   isTrigger: 0
+--- !u!114 &6110722679368314588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6552334294094605322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6b352491cc3174e85fd930eb99d35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnCollision
+  clip: {fileID: 8300000, guid: acc0fe98518f6a54884a04374931cf1d, type: 3}
 --- !u!1001 &5808705687903341187
 PrefabInstance:
   m_ObjectHideFlags: 0
