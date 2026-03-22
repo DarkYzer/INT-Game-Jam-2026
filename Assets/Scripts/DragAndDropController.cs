@@ -137,6 +137,7 @@ public class DragAndDropController: MonoBehaviour
 
     public void OnTouchPress(InputAction.CallbackContext context)
     {
+        if (PauseMenu.Instance.isPaused) return;
         // --- On récupère l'object cliqué --- //
         Ray ray = Camera.main.ScreenPointToRay(currentTouchPos);
         if (Physics.Raycast(ray, out RaycastHit hit))
