@@ -23,6 +23,7 @@ public class LivesManager : MonoBehaviour
     private void Start()
     {
         _mainCamera = Camera.main;
+        lives = 3;
         if (_mainCamera) _cameraStartPosition = _mainCamera.transform.position;
     }
     
