@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Collections;
 using TMPro;
 using TMPro.Examples;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class SelectorScript : MonoBehaviour
 {
@@ -19,10 +21,10 @@ public class SelectorScript : MonoBehaviour
     [SerializeField] List<GameObject> spawnableObjects; // List of objects that could be selectable
     GameObject[] myObjects; // List of available objects
 
-    [SerializeField] List<TextMeshProUGUI> weightTexts; // List of weights
+    [SerializeField] List<GameObject> weightTexts; // List of weights
 
     [SerializeField] float[] weightThresholds;
-    [SerializeField] string[] nameWeightCategories;
+    [SerializeField] Sprite[] nameWeightCategories;
 
     [SerializeField] AnimationCurve timeDilationCurve; // Preferably, you just have to change this one, ideally similar to a decreasing exponential
     [SerializeField] List<AnimationCurve> shiftingProbaCurves; // Preferably, these are linear, from one value to another
@@ -97,15 +99,15 @@ public class SelectorScript : MonoBehaviour
             {
                 if (myObjects[i].GetComponent<Rigidbody>().mass > weightThresholds[j] - .1f)
                 {
-                    weightTexts[i].text = nameWeightCategories[j]; // Shows the weight
+                    weightTexts[i].GetComponent<UnityEngine.UI.Image>().sprite = nameWeightCategories[j]; // Shows the weight
                     isWithinWeight = true;
                 }
             }
-            if (!isWithinWeight)
+            if (!isWithinWeight)    
             {
-                weightTexts[i].text = nameWeightCategories[weightThresholds.Length];
+                weightTexts[i].GetComponent<UnityEngine.UI.Image>().sprite = nameWeightCategories[weightThresholds.Length];
             }
-
+            weightTexts[i].SetActive(true);
         }
         waveCount += 1f;
     }
@@ -146,7 +148,7 @@ public class SelectorScript : MonoBehaviour
             if (myObjects[i] == selectedObject)
             {
                 myObjects[i] = null;
-                weightTexts[i].text = "";
+                weightTexts[i].SetActive(false);
             }
             if (myObjects[i] == null)
             {
