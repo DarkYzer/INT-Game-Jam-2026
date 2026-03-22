@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject MenuPause;
-
+    [SerializeField] TextMeshProUGUI scoreText;
+    
     public void BackToMenu(){
         SceneManager.LoadScene("Nocty");
     }
@@ -29,5 +31,15 @@ public class PauseMenu : MonoBehaviour
     {
         MenuPause.SetActive(false);
     }
+
+    public void YouDied(){
+
+        //affiche l'écran de mort
+
+        //récupère et affiche le score
+        int score=DragAndDropController.Instance.score;
+        scoreText.text = $"Score: {score}";
+    }
+    
 
 }
