@@ -14,7 +14,11 @@ public class LivesManager : MonoBehaviour
     private bool _shouldShake;
     [SerializeField] private float shakeDuration;
     [SerializeField] private float shakeStrength;
-    [SerializeField] private AnimationCurve curve;
+    [SerializeField] private AnimationCurve shakeCurve;
+    [SerializeField] private GameObject balance;
+    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private PauseMenu pauseMenu;
+    [SerializeField] private AnimationCurve gameOverFallingCurve;
 
     private void Start()
     {
@@ -25,7 +29,8 @@ public class LivesManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.isTrigger) return;
-        StartCoroutine(livesUpdate());
+        StartCoroutine(LivesUpdate());
+        if (lives == 0) StartCoroutine(GameOver());
         StartCoroutine(Remove(other.gameObject));
         DragAndDropController.Instance.hasBeenPlaced.Remove(other.transform);
         StartCoroutine(Shake());
@@ -37,7 +42,7 @@ public class LivesManager : MonoBehaviour
         while (time < shakeDuration)
         {
             time += Time.deltaTime;
-            var strength = curve.Evaluate(time / shakeDuration) * shakeStrength;
+            var strength = shakeCurve.Evaluate(time / shakeDuration) * shakeStrength;
             if (_shakeDirection.magnitude == 0) _shakeDirection = Random.insideUnitSphere;
             _mainCamera.transform.position += _shakeDirection * strength;
             yield return null;
@@ -59,26 +64,50 @@ public class LivesManager : MonoBehaviour
     [SerializeField] Sprite emptyHeart;
     [SerializeField] Sprite fullHeart;
 
-    bool canTakeDamage = true;
-    IEnumerator livesUpdate()
+    private bool _canTakeDamage = true;
+    private IEnumerator LivesUpdate()
     {
-        if (canTakeDamage) lives--;;
-        canTakeDamage = false;
-        for (int i = 0; i < heartList.Count; i++)
+        if (_canTakeDamage)
         {
-            if (lives <= i)
+            _canTakeDamage = false;
+            lives--;
+            for (int i = 0; i < heartList.Count; i++)
             {
-                heartList[i].sprite = emptyHeart;
-                heartList[i].color = Color.black;
+                if (lives <= i)
+                {
+                    heartList[i].sprite = emptyHeart;
+                    heartList[i].color = Color.black;
+                }
+                else
+                {
+                    heartList[i].sprite = fullHeart;
+                    heartList[i].color = Color.white;
+                }
             }
-            else
-            {
-                heartList[i].sprite = fullHeart;
-                heartList[i].color = Color.white;
-            }
-        }
-        yield return new WaitForSeconds(1f);
-        canTakeDamage = true;
+            yield return new WaitForSeconds(1f);
+            _canTakeDamage = true;
+        };
     }
 
+    private IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(1f);
+        balance.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        gameOverScreen.SetActive(true);
+        gameOverScreen.TryGetComponent<RectTransform>(out var pos);
+        pos.anchorMin = new Vector2(0,1);
+        pos.anchorMax = new Vector2(1,2);
+        float time = 0;
+        while (time < 2)
+        {
+            time += Time.deltaTime;
+            pos.anchorMin = new Vector2(0,1 - gameOverFallingCurve.Evaluate(time*.5f));
+            pos.anchorMax = new Vector2(1,2 - gameOverFallingCurve.Evaluate(time*.5f));
+            yield return new WaitForEndOfFrame();
+        }
+        pos.anchorMin = new Vector2(0,0);
+        pos.anchorMax = new Vector2(1,1);
+        pauseMenu.YouDied();
+    }
 }

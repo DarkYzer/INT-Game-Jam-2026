@@ -47,8 +47,6 @@ public class PauseMenu : MonoBehaviour
 
     public void YouDied(){
         isPaused=true;
-        //affiche l'écran de mort
-        MenuDeath.SetActive(true);
         //récupère et affiche le score
         int score=DragAndDropController.Instance.score;
         scoreText.text = $"Score: {score}";
