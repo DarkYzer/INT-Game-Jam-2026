@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3661046098234867092}
   - component: {fileID: -4648476645095036460}
   - component: {fileID: -7474624706455527272}
+  - component: {fileID: -3557129060493267971}
   m_Layer: 0
   m_Name: TetrisT
   m_TagString: Untagged
@@ -80,6 +81,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
+--- !u!114 &-3557129060493267971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514778368956699796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6b352491cc3174e85fd930eb99d35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnCollision
+  clip: {fileID: 8300000, guid: 3e485abb0cb4ae94da1cf437208424ec, type: 3}
+  n: 1
 --- !u!1001 &737955624075583579
 PrefabInstance:
   m_ObjectHideFlags: 0
