@@ -96,6 +96,7 @@ public class LivesManager : MonoBehaviour
         balance.SetActive(false);
         yield return new WaitForSeconds(2f);
         gameOverScreen.SetActive(true);
+        pauseMenu.YouDied();
         gameOverScreen.TryGetComponent<RectTransform>(out var pos);
         pos.anchorMin = new Vector2(0,1);
         pos.anchorMax = new Vector2(1,2);
@@ -109,6 +110,5 @@ public class LivesManager : MonoBehaviour
         }
         pos.anchorMin = new Vector2(0,0);
         pos.anchorMax = new Vector2(1,1);
-        pauseMenu.YouDied();
     }
 }
