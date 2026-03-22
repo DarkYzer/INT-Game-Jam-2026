@@ -136,6 +136,11 @@ public class DragAndDropController: MonoBehaviour
                     selectedObject.position.y,
                     0);
             }
+            if (selectedObject.position.y < .5f)
+                selectedObject.position = new Vector3(
+                    selectedObject.position.x,
+                    .5f,
+                    0);
         }
     }
 
@@ -195,7 +200,7 @@ public class DragAndDropController: MonoBehaviour
         
         // Si l'object est dans un autre, on le place plus haut et il tombe
         // on fait un raycast très haut qui pointe vers le bas et on récupère le point de contact (le point le plus haut)
-        Vector3 rayOrigin = selectedObject.position + new Vector3(0, 100, 0);
+        Vector3 rayOrigin = selectedObject.position + new Vector3(0, 10, 0);
         RaycastHit hit;
         if (Physics.Raycast(rayOrigin, Vector3.down, out hit, Mathf.Infinity, placedObjectLayerMask))
         {
