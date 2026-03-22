@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4430457263984923801}
   - component: {fileID: -2555010222937685100}
   - component: {fileID: 6570801030624934274}
+  - component: {fileID: 8939624657355607877}
   m_Layer: 0
   m_Name: TetrisL
   m_TagString: Untagged
@@ -80,6 +81,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
+--- !u!114 &8939624657355607877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681029119241094136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6b352491cc3174e85fd930eb99d35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnCollision
+  clip: {fileID: 8300000, guid: 3e485abb0cb4ae94da1cf437208424ec, type: 3}
+  n: 1
 --- !u!1001 &5378277354251066623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f4be27842c0d24d943f43528e00f35, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f4be27842c0d24d943f43528e00f35, type: 3}
       propertyPath: m_LocalRotation.w
@@ -237,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f4be27842c0d24d943f43528e00f35, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f4be27842c0d24d943f43528e00f35, type: 3}
       propertyPath: m_LocalRotation.w
@@ -364,7 +379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f4be27842c0d24d943f43528e00f35, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f4be27842c0d24d943f43528e00f35, type: 3}
       propertyPath: m_LocalRotation.w
@@ -491,7 +506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f4be27842c0d24d943f43528e00f35, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f4be27842c0d24d943f43528e00f35, type: 3}
       propertyPath: m_LocalRotation.w

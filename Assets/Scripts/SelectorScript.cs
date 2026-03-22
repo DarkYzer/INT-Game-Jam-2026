@@ -22,6 +22,9 @@ public class SelectorScript : MonoBehaviour
 
     [SerializeField] List<TextMeshProUGUI> weightTexts; // List of weights
 
+    [SerializeField] float[] weightThresholds;
+    [SerializeField] string[] nameWeightCategories;
+
     private bool readyToDrop = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -50,10 +53,10 @@ public class SelectorScript : MonoBehaviour
         }
         int randomPick = UnityEngine.Random.Range(1, probaSum + 1);
         probaSum = 0;
-        for (int i = 0; i <= probaTable.Count; i++)
+        for (int i = 0; i < probaTable.Count; i++)
         {
             probaSum += probaTable[i];
-            if (randomPick < probaSum)
+            if (randomPick <= probaSum)
             {
                 return i;
             }
@@ -61,18 +64,32 @@ public class SelectorScript : MonoBehaviour
         return probaTable.Count - 1; // N'est pas censé arriver
     }
 
+    // Refills the selector, picking random non exclusive objects from spawnableObjects
     void refill()
     {
         for (int i = 0; i < sizeOf; i++)
         {
             int explorer = randomElement();
-            Vector3 spawnPosition = spawnPoints[i].transform.position;
+            Vector3 spawnPosition = spawnPoints[i].transform.position; // Hard coding the z position, kinda useless
             spawnPosition.z = 0;
             myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPosition, Quaternion.identity);
-            myObjects[i].transform.parent = gameObject.transform;
-            myObjects[i].transform.SetPositionAndRotation(spawnPosition, Quaternion.identity);
+            myObjects[i].transform.parent = gameObject.transform; // Parenting the objects to the selector so it moves along the camera
+            myObjects[i].transform.SetPositionAndRotation(spawnPosition, Quaternion.identity); // Sets the z axis to 0, still useless
             myObjects[i].SetActive(true);
-            weightTexts[i].text = myObjects[i].GetComponent<Rigidbody>().mass.ToString() + " kg";
+            bool isWithinWeight = false;
+            for (int j = 0; j < weightThresholds.Length; j++)
+            {
+                if (myObjects[i].GetComponent<Rigidbody>().mass > weightThresholds[j] - .1f)
+                {
+                    weightTexts[i].text = nameWeightCategories[j]; // Shows the weight
+                    isWithinWeight = true;
+                }
+            }
+            if (!isWithinWeight)
+            {
+                weightTexts[i].text = nameWeightCategories[weightThresholds.Length];
+            }
+
         }
     }
 

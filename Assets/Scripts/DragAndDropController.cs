@@ -131,18 +131,23 @@ public class DragAndDropController: MonoBehaviour
             if (dragPlane.Raycast(ray, out float distance))
             {
                 selectedObject.position = ray.GetPoint(distance) + offset;
+                selectedObject.position = new Vector3(
+                    selectedObject.position.x,
+                    selectedObject.position.y,
+                    0);
             }
         }
     }
 
     public void OnTouchPress(InputAction.CallbackContext context)
     {
+        if (PauseMenu.Instance.isPaused) return;
         // --- On récupère l'object cliqué --- //
         Ray ray = Camera.main.ScreenPointToRay(currentTouchPos);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             selectedObject = hit.transform;
-            dragPlane = new Plane(-Camera.main.transform.forward, hit.point);
+            dragPlane = new Plane(new Vector3(0,0,1), hit.point);
             offset = selectedObject.position - hit.point;
             objScript = selectedObject.GetComponent<ObjectScript>();
             if (selectedObject.CompareTag("FixedObject"))
