@@ -1642,8 +1642,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 1903750597035666290}
     m_Modifications:
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: probaTable.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: weightTexts.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'probaTable.Array.data[0]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'probaTable.Array.data[1]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'probaTable.Array.data[2]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'probaTable.Array.data[3]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'probaTable.Array.data[4]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'probaTable.Array.data[5]'
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'probaTable.Array.data[6]'
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'probaTable.Array.data[7]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'probaTable.Array.data[8]'
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnPoints.Array.data[0]'
@@ -1687,36 +1727,40 @@ PrefabInstance:
       objectReference: {fileID: 3187157161344751129}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: spawnableObjects.Array.size
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
-      propertyPath: 'spawnableObjects.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2259566586312427436, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
-    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
-      propertyPath: 'spawnableObjects.Array.data[2]'
-      value: 
-      objectReference: {fileID: 4360772750461853154, guid: db92ca43df234534bb2ee99212727ea5, type: 3}
-    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
-      propertyPath: 'spawnableObjects.Array.data[3]'
-      value: 
-      objectReference: {fileID: 2259566586312427436, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
-    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
-      propertyPath: 'spawnableObjects.Array.data[4]'
-      value: 
-      objectReference: {fileID: 4789002254899443646, guid: 16a58ccb1ce1c0643a9fc8d9f84ac940, type: 3}
-    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
-      propertyPath: 'spawnableObjects.Array.data[6]'
+      propertyPath: 'spawnableObjects.Array.data[0]'
       value: 
       objectReference: {fileID: 9196220743670091595, guid: bce4fa92319565c498a7e190376364bb, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
-      propertyPath: 'spawnableObjects.Array.data[7]'
+      propertyPath: 'spawnableObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 9196220743670091595, guid: 2f95f64e4dc2ae84ca23b75310bcb513, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
-      propertyPath: 'spawnableObjects.Array.data[8]'
+      propertyPath: 'spawnableObjects.Array.data[2]'
       value: 
       objectReference: {fileID: 2435229178674783395, guid: 8212a727836392d4e9a110562f76b67f, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[3]'
+      value: 
+      objectReference: {fileID: 681029119241094136, guid: f8e6169830489d54fbb27aa9bd55d355, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3514778368956699796, guid: f8b41edf6c9109847bf2eeb92ab20b0a, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[6]'
+      value: 
+      objectReference: {fileID: 2259566586312427436, guid: 83cb97dd5b73c504da9f91ede5403b88, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[7]'
+      value: 
+      objectReference: {fileID: 4789002254899443646, guid: 16a58ccb1ce1c0643a9fc8d9f84ac940, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: 'spawnableObjects.Array.data[8]'
+      value: 
+      objectReference: {fileID: 4360772750461853154, guid: db92ca43df234534bb2ee99212727ea5, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[9]'
       value: 
