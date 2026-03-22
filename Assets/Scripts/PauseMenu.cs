@@ -46,7 +46,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void YouDied(){
-        isPaused=True;
+        isPaused=true;
         //affiche l'écran de mort
         MenuDeath.SetActive(true);
         //récupère et affiche le score
