@@ -480,6 +480,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &884857037 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 756089897568294482, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
+  m_PrefabInstance: {fileID: 6558298376475272263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &889772203 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6119272677904640963, guid: 26ef6dafda2ce1348831672f76e338c6, type: 3}
@@ -839,6 +844,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4969380942920843410, guid: b9774d1cf30d85a4dadf638a931b1b3c, type: 3}
+      propertyPath: field of view
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 6001385078383156126, guid: b9774d1cf30d85a4dadf638a931b1b3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -938,6 +947,10 @@ PrefabInstance:
     - target: {fileID: 8044425979670736442, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129261858496102881, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
+      propertyPath: m_Constraints
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1041,7 +1054,7 @@ PrefabInstance:
     - target: {fileID: 1397025071449675018, guid: d21994a4a9dc402408d4c06e88709d37, type: 3}
       propertyPath: balance
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 884857037}
     - target: {fileID: 1397025071449675018, guid: d21994a4a9dc402408d4c06e88709d37, type: 3}
       propertyPath: maxOffset
       value: 1700
