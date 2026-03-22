@@ -4,32 +4,43 @@ using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static PauseMenu Instance {get; private set;}
     [SerializeField] GameObject MenuPause;
     [SerializeField] TextMeshProUGUI scoreText;
-    
+    bool isPaused;
+
     public void BackToMenu(){
         SceneManager.LoadScene("Nocty");
     }
 
     public void PauseGame(){
         Time.timeScale=0; //pauser le temps
+        isPaused=true;
+
         //l'écran devrait empêcher le joueur de bouger des objets
     }
 
     public void ResumeGame(){
         Time.timeScale=1; //relancer le temps
+        isPaused=false;
     }
 
     public void LoadGame() {
             //pour le bouton play, lance la scene du jeu
             Time.timeScale=1;
+            isPaused=false;
             SceneManager.LoadScene("1stBuild");
         }
+
+   
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         MenuPause.SetActive(false);
+        if (Instance == null)
+            Instance = this;
     }
 
     public void YouDied(){
