@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4394339341043623810}
   - component: {fileID: 4470473035927525399}
   - component: {fileID: 492952706145380208}
+  - component: {fileID: 6984287569603011749}
   m_Layer: 0
   m_Name: crate
   m_TagString: Untagged
@@ -180,6 +181,20 @@ MonoBehaviour:
   shakeFastTime: 0.1
   shakeSlowTime: 0.3
   isTrigger: 0
+--- !u!114 &6984287569603011749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2259566586312427436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6b352491cc3174e85fd930eb99d35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnCollision
+  clip: {fileID: 8300000, guid: 7deb3c5fb3f550242a7df6338758b6c4, type: 3}
+  n: 3
 --- !u!1001 &7541734381916536984
 PrefabInstance:
   m_ObjectHideFlags: 0

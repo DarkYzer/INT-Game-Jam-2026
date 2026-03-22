@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1978503005903809775}
   - component: {fileID: 7667549201180586958}
   - component: {fileID: -7337300290457210978}
+  - component: {fileID: -9199712335287316292}
   m_Layer: 0
   m_Name: Tetris-ZigZag-2
   m_TagString: Untagged
@@ -130,6 +131,20 @@ MonoBehaviour:
   shakeFastTime: 0.1
   shakeSlowTime: 0.3
   isTrigger: 0
+--- !u!114 &-9199712335287316292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196220743670091595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6b352491cc3174e85fd930eb99d35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnCollision
+  clip: {fileID: 8300000, guid: 3e485abb0cb4ae94da1cf437208424ec, type: 3}
+  n: 1
 --- !u!1001 &233608270949788956
 PrefabInstance:
   m_ObjectHideFlags: 0
