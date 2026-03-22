@@ -210,12 +210,14 @@ public class DragAndDropController: MonoBehaviour
             size = hasBeenPlaced.Count;
         }
 
-        // Object de selectionné
-        selectedObject = null;
         // gestion du score
         updateScore(1);
+        selectedObject.SetParent(transform);
 
         cols.Clear();
+
+        // Object de selectionné
+        selectedObject = null;
     }
 
     IEnumerator updateScoreShow()
