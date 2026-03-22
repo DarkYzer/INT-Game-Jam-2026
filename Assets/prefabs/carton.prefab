@@ -361,11 +361,11 @@ MonoBehaviour:
   shakeFastTime: 0.1
   shakeSlowTime: 0.3
   isTrigger: 0
-  maxHits: 1
+  maxHits: 4
   explosion: {fileID: 352271455807353272}
   colis: {fileID: 6655690082932504530}
   explosionRange: 2
-  explosionStrength: 5
+  explosionStrength: 3
 --- !u!1 &6655690082932504530
 GameObject:
   m_ObjectHideFlags: 0
