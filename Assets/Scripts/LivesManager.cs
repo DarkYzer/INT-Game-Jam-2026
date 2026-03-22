@@ -59,11 +59,6 @@ public class LivesManager : MonoBehaviour
     [SerializeField] Sprite emptyHeart;
     [SerializeField] Sprite fullHeart;
 
-    void Update()
-    {
-        Debug.Log(canTakeDamage);
-    }
-
     bool canTakeDamage = true;
     IEnumerator livesUpdate()
     {
