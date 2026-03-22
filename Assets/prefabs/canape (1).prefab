@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: canape (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 064c14a345e01924b92330bd75c3e3cc, type: 3}
+      propertyPath: m_TagString
+      value: MovingObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2345673317844282053, guid: 064c14a345e01924b92330bd75c3e3cc, type: 3}
