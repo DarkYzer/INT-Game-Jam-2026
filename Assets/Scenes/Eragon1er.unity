@@ -902,8 +902,68 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6295039771005671424, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 1929981484146640127, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
+--- !u!1 &1415730018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1415730020}
+  - component: {fileID: 1415730019}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1415730019
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415730018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &1415730020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415730018}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.06251, y: 0, z: 6.59549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1598045105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1075,17 +1135,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c88ff0c5acc5d2b4d9763f0b224ee141, type: 3}
---- !u!114 &1982552525 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7908567585058639852, guid: 9f47627859e2f264e84c7703d8f122e9, type: 3}
-  m_PrefabInstance: {fileID: 1059608086}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ef0daccb8113f43922f2b992858765, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DragAndDropController
 --- !u!1 &2077327795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2981032862173198759, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2981032862173198759, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1255,7 +1304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3345718152785551861, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3345718152785551861, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1272,14 +1321,14 @@ PrefabInstance:
     - target: {fileID: 4263538045265534974, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: dragNdropController
       value: 
-      objectReference: {fileID: 1982552525}
+      objectReference: {fileID: 0}
     - target: {fileID: 4464758024955193444, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: m_Name
       value: SelectorShelf
       objectReference: {fileID: 0}
     - target: {fileID: 4831713822781723314, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4831713822781723314, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1303,7 +1352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5458772364392355289, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5458772364392355289, guid: 138a346e74f674441807fb9e0e917190, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1343,3 +1392,4 @@ SceneRoots:
   - {fileID: 1059608086}
   - {fileID: 1252998633}
   - {fileID: 2077327798}
+  - {fileID: 1415730020}
