@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96403e0220d09154d97adfe7645d88c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectScript
+  shakeAngle: 20
+  shakeFastTime: 0.1
+  shakeSlowTime: 0.3
   isTrigger: 0
 --- !u!1001 &3478461610546585779
 PrefabInstance:
@@ -132,9 +135,6 @@ PrefabInstance:
       addedObject: {fileID: 6596207946968774873}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d36015159933e7943a511ba4f2d7f856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2691137019335229580}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d36015159933e7943a511ba4f2d7f856, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2686372237558823202}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d36015159933e7943a511ba4f2d7f856, type: 3}
       insertIndex: -1
@@ -151,6 +151,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d36015159933e7943a511ba4f2d7f856, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6887252716457155839}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d36015159933e7943a511ba4f2d7f856, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3565164146665730162}
   m_SourcePrefab: {fileID: 100100000, guid: d36015159933e7943a511ba4f2d7f856, type: 3}
 --- !u!4 &4021506774632433496 stripped
 Transform:
@@ -174,6 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96403e0220d09154d97adfe7645d88c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectScript
+  shakeAngle: 20
+  shakeFastTime: 0.1
+  shakeSlowTime: 0.3
   isTrigger: 0
 --- !u!54 &6596207946968774873
 Rigidbody:
@@ -202,19 +208,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
---- !u!114 &2691137019335229580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4360772750461853154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca6b352491cc3174e85fd930eb99d35d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnCollision
-  clip: {fileID: 8300000, guid: 168135bc97daa18458c1fa64526e166b, type: 3}
 --- !u!136 &2686372237558823202
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -353,3 +346,17 @@ CapsuleCollider:
   m_Height: 1.1311549
   m_Direction: 0
   m_Center: {x: 0.01901893, y: -0.14, z: -0.000093670336}
+--- !u!114 &3565164146665730162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360772750461853154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61952823e4bb3524688c8b4762236c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundNTimesOnCollision
+  clip: {fileID: 8300000, guid: 168135bc97daa18458c1fa64526e166b, type: 3}
+  n: 100
