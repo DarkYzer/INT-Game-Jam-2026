@@ -97,7 +97,7 @@ public class SelectorScript : MonoBehaviour
             bool isWithinWeight = false;
             for (int j = 0; j < weightThresholds.Length; j++)
             {
-                if (myObjects[i].GetComponent<Rigidbody>().mass > weightThresholds[j] - .1f)
+                if (myObjects[i].GetComponent<Rigidbody>().mass < weightThresholds[j] + .1f && !isWithinWeight)
                 {
                     weightTexts[i].GetComponent<UnityEngine.UI.Image>().sprite = nameWeightCategories[j]; // Shows the weight
                     isWithinWeight = true;
