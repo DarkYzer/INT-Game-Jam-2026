@@ -1121,25 +1121,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 87252213782645992, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
-      propertyPath: m_TagString
-      value: FixedObject
-      objectReference: {fileID: 0}
     - target: {fileID: 2065925312237128939, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
       propertyPath: m_Name
       value: balance
-      objectReference: {fileID: 0}
-    - target: {fileID: 3190960704805927953, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
-      propertyPath: m_Spring
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 3534463699335965195, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
-      propertyPath: m_Spring
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 5109111481299632212, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
-      propertyPath: m_TagString
-      value: FixedObject
       objectReference: {fileID: 0}
     - target: {fileID: 8044425979670736442, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1180,10 +1164,6 @@ PrefabInstance:
     - target: {fileID: 8044425979670736442, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8129261858496102881, guid: b11a461f33f107e4b9fb7474ba838166, type: 3}
-      propertyPath: m_Constraints
-      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

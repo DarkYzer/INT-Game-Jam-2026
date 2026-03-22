@@ -1741,6 +1741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   MenuPause: {fileID: 5810606590084288427}
+  MenuDeath: {fileID: 0}
   scoreText: {fileID: 8718045586770019195}
   isPaused: 0
 --- !u!114 &2315131725235666396
