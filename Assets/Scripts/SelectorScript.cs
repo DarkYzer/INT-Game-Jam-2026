@@ -40,24 +40,38 @@ public class SelectorScript : MonoBehaviour
         
     }
 
+    // Returns the index of a picked element in spawnableObjects according to probatable
+    private int randomElement()
+    {
+        int probaSum = 0;
+        for (int i = 0; i < probaTable.Count; i++)
+        {
+            probaSum += probaTable[i];
+        }
+        int randomPick = UnityEngine.Random.Range(1, probaSum + 1);
+        probaSum = 0;
+        for (int i = 0; i <= probaTable.Count; i++)
+        {
+            probaSum += probaTable[i];
+            if (randomPick < probaSum)
+            {
+                return i;
+            }
+        }
+        return probaTable.Count - 1; // N'est pas censé arriver
+    }
+
     void refill()
     {
-        // Besoin de spawnableObjects.Count >= sizeOf
-        int[] exploredObjects = new int[spawnableObjects.Count];
-        for (int i = 0;  i < sizeOf; i++)
+        for (int i = 0; i < sizeOf; i++)
         {
-            while (myObjects[i] == null) // Récupère un objet non récupéré dans myObjects depuis spawnObjects
-            {
-                int explorer = UnityEngine.Random.Range(0, spawnableObjects.Count);
-                if (exploredObjects[explorer] != 1) // Pour l'instant ça évite d'avoir des réplicas
-                {
-                    exploredObjects[explorer] = 1;
-                    myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPoints[i].transform.position, Quaternion.identity);
-                    myObjects[i].transform.parent = gameObject.transform;
-                    myObjects[i].SetActive(true);
-                    weightTexts[i].text = myObjects[i].GetComponent<Rigidbody>().mass.ToString() + " kg";
-                }
-            }
+            int explorer = randomElement();
+            Vector3 spawnPosition = spawnPoints[i].transform.position;
+            spawnPosition.z = 0;
+            myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPosition, Quaternion.identity);
+            myObjects[i].transform.parent = gameObject.transform;
+            myObjects[i].SetActive(true);
+            weightTexts[i].text = myObjects[i].GetComponent<Rigidbody>().mass.ToString() + " kg";
         }
     }
 
