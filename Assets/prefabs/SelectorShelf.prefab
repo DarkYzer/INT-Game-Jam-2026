@@ -812,6 +812,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1903750597035666290}
     m_Modifications:
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
+      propertyPath: dragNdropController
+      value: 
+      objectReference: {fileID: 2977139264049940928, guid: 9f47627859e2f264e84c7703d8f122e9, type: 3}
+    - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: probaTable.Array.size
       value: 9
       objectReference: {fileID: 0}
