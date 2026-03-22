@@ -18,6 +18,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale=1; //relancer le temps
     }
 
+    public void LoadGame() {
+            //pour le bouton play, lance la scene du jeu
+            Time.timeScale=1;
+            SceneManager.LoadScene("1stBuild");
+        }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
