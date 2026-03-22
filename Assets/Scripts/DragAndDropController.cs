@@ -20,8 +20,8 @@ public class DragAndDropController: MonoBehaviour
 
     [Header("Score")]
     public int score;
-    [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] TextMeshProUGUI updateScoreText;
+    [SerializeField] TextMeshPro scoreText;
+    [SerializeField] TextMeshPro updateScoreText;
 
     [Header("input Actions")]
     public InputActionReference trackingAction;
