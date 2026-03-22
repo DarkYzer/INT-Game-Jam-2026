@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.Events;
-using System.Collections;
 
 public class DragAndDropController: MonoBehaviour
 {
@@ -20,8 +19,7 @@ public class DragAndDropController: MonoBehaviour
 
     [Header("Score")]
     public int score;
-    [SerializeField] TextMeshPro scoreText;
-    [SerializeField] TextMeshPro updateScoreText;
+    [SerializeField] TextMeshProUGUI scoreText;
 
     [Header("input Actions")]
     public InputActionReference trackingAction;
@@ -57,6 +55,8 @@ public class DragAndDropController: MonoBehaviour
         clickingAction.action.canceled += OnTouchRelease;
         turningAction.action.performed += OnTurn;
         turningAction.action.canceled += OnTurnEnd;
+    
+        scoreText.text = $"Score: {score}";
     }
 
     private void OnDisable()
@@ -218,27 +218,9 @@ public class DragAndDropController: MonoBehaviour
         cols.Clear();
     }
 
-    IEnumerator updateScoreShow()
-    {
-        updateScoreText.enabled = true;
-        yield return new WaitForSeconds(.5f);
-        updateScoreText.enabled = false;
-    }
-
-    public void updateScore(int scoreChange)
+    void updateScore(int scoreChange)
     {
         score += scoreChange;
-        if (scoreChange > 0)
-        {
-            updateScoreText.text = $"+{scoreChange}";
-            updateScoreText.color = Color.green;
-        }
-        else
-        {
-            updateScoreText.text = $"{scoreChange}";
-            updateScoreText.color = Color.red;
-        }
-        StartCoroutine(updateScoreShow());
-        scoreText.text = $"{score}";
+        scoreText.text = $"Score: {score}";
     }
 }
