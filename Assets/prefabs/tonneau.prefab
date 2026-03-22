@@ -68,6 +68,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9eb398ccbafa9249941ea21056922a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3345561166359041316}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9eb398ccbafa9249941ea21056922a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6711116268339251096}
   m_SourcePrefab: {fileID: 100100000, guid: a9eb398ccbafa9249941ea21056922a6, type: 3}
 --- !u!1 &3863466911063951102 stripped
 GameObject:
@@ -113,7 +116,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -156,8 +159,22 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 56
   m_CollisionDetection: 0
+--- !u!114 &-6711116268339251096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3863466911063951102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6b352491cc3174e85fd930eb99d35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnCollision
+  clip: {fileID: 8300000, guid: 7deb3c5fb3f550242a7df6338758b6c4, type: 3}
+  n: 1
