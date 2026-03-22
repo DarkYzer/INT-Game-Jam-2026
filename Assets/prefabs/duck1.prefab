@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnCollision
   clip: {fileID: 8300000, guid: 168135bc97daa18458c1fa64526e166b, type: 3}
+  n: 100
 --- !u!136 &2686372237558823202
 CapsuleCollider:
   m_ObjectHideFlags: 0
