@@ -18,14 +18,20 @@ public class SelectorScript : MonoBehaviour
 
     [SerializeField] List<GameObject> spawnableObjects; // List of objects that could be selectable
     GameObject[] myObjects; // List of available objects
-    [SerializeField] List<int> probaTable;
 
     [SerializeField] List<TextMeshProUGUI> weightTexts; // List of weights
 
     [SerializeField] float[] weightThresholds;
     [SerializeField] string[] nameWeightCategories;
 
-    private bool readyToDrop = false;
+    [SerializeField] AnimationCurve timeDilationCurve; // Preferably, you just have to change this one, ideally similar to a decreasing exponential
+    [SerializeField] List<AnimationCurve> shiftingProbaCurves; // Preferably, these are linear, from one value to another
+
+    [SerializeField] List<float> baseProbaTable; // The values we want at the start for probabilities
+    [SerializeField] List<float> endProbaTable; // The values we want in the end for probabilities
+    // The end being the tangent of timeDiliationCurve or something similar
+
+    float waveCount = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +39,7 @@ public class SelectorScript : MonoBehaviour
         sizeOf = spawnPoints.Length;
         myObjects = new GameObject[sizeOf];
         dragNdropController.OnPick.AddListener(removeObject);
+        setStartProba();
 
         refill();
     }
@@ -43,25 +50,34 @@ public class SelectorScript : MonoBehaviour
         
     }
 
+    private void setStartProba()
+    {
+        for (int i = 0; i < baseProbaTable.Count; i++)
+        {
+            shiftingProbaCurves.Add(AnimationCurve.Linear(0f, baseProbaTable[i], 1f, endProbaTable[i]));
+        }
+    }
+
     // Returns the index of a picked element in spawnableObjects according to probatable
     private int randomElement()
     {
-        int probaSum = 0;
-        for (int i = 0; i < probaTable.Count; i++)
+        float time = timeDilationCurve.Evaluate(waveCount);
+        float probaSum = 0f;
+        for (int i = 0; i < shiftingProbaCurves.Count; i++)
         {
-            probaSum += probaTable[i];
+            probaSum += shiftingProbaCurves[i].Evaluate(time);
         }
-        int randomPick = UnityEngine.Random.Range(1, probaSum + 1);
-        probaSum = 0;
-        for (int i = 0; i < probaTable.Count; i++)
+        float randomPick = UnityEngine.Random.Range(1, probaSum);
+        probaSum = 0f;
+        for (int i = 0; i < shiftingProbaCurves.Count; i++)
         {
-            probaSum += probaTable[i];
-            if (randomPick <= probaSum)
+            probaSum += shiftingProbaCurves[i].Evaluate(time);
+            if (randomPick < probaSum)
             {
                 return i;
             }
         }
-        return probaTable.Count - 1; // N'est pas censé arriver
+        return shiftingProbaCurves.Count - 1; // N'est pas censé arriver
     }
 
     // Refills the selector, picking random non exclusive objects from spawnableObjects
@@ -91,6 +107,7 @@ public class SelectorScript : MonoBehaviour
             }
 
         }
+        waveCount += 1f;
     }
 
     void dropRandom()
