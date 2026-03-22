@@ -945,7 +945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: spawnableObjects.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: weightThresholds.Array.size
@@ -1014,7 +1014,7 @@ PrefabInstance:
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'spawnableObjects.Array.data[9]'
       value: 
-      objectReference: {fileID: 681029119241094136, guid: f8e6169830489d54fbb27aa9bd55d355, type: 3}
+      objectReference: {fileID: 3863466911063951102, guid: c5de1f2bc62809544a5c5a6c97046049, type: 3}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'weightThresholds.Array.data[0]'
       value: 1
