@@ -59,15 +59,11 @@ public class LivesManager : MonoBehaviour
     [SerializeField] Sprite emptyHeart;
     [SerializeField] Sprite fullHeart;
 
-    void Update()
-    {
-        Debug.Log(canTakeDamage);
-    }
-
     bool canTakeDamage = true;
     IEnumerator livesUpdate()
     {
         if (canTakeDamage) lives--;;
+        if (canTakeDamage) DragAndDropController.Instance.updateScore(-1);
         canTakeDamage = false;
         for (int i = 0; i < heartList.Count; i++)
         {
