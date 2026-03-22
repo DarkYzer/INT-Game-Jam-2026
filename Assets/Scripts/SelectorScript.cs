@@ -70,6 +70,7 @@ public class SelectorScript : MonoBehaviour
             spawnPosition.z = 0;
             myObjects[i] = Instantiate(spawnableObjects[explorer], spawnPosition, Quaternion.identity);
             myObjects[i].transform.parent = gameObject.transform;
+            myObjects[i].transform.SetPositionAndRotation(spawnPosition, Quaternion.identity);
             myObjects[i].SetActive(true);
             weightTexts[i].text = myObjects[i].GetComponent<Rigidbody>().mass.ToString() + " kg";
         }
