@@ -15,13 +15,11 @@ public class ObjectScript : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {
         isTrigger = true;
-        outlineScript.enabled = true;
     }
 
     public void OnTriggerExit(Collider other)
     {
         isTrigger = false;
-        outlineScript.enabled = false;   
     }
 
     public void shakeSlow(float shakeTotalTime)
@@ -51,11 +49,4 @@ public class ObjectScript : MonoBehaviour
         }
     }
 
-    // outline
-    Outline outlineScript;
-    void Start()
-    {
-        outlineScript = GetComponent<Outline>();
-        outlineScript.enabled = false;
-    }
 }
