@@ -14,12 +14,14 @@ public class ObjectScript : MonoBehaviour
     public bool isTrigger = false; // est ce que l'objet touche un autre ?bool isTrigger = false; // est ce que l'objet touche un autre ?
     public void OnTriggerStay(Collider other)
     {
-        isTrigger = true;        
+        isTrigger = true;
+        outlineScript.enabled = true;
     }
 
     public void OnTriggerExit(Collider other)
     {
-        isTrigger = false;       
+        isTrigger = false;
+        outlineScript.enabled = false;   
     }
 
     public void shakeSlow(float shakeTotalTime)
@@ -47,5 +49,13 @@ public class ObjectScript : MonoBehaviour
                 grandTimer += Time.deltaTime;
             }
         }
+    }
+
+    // outline
+    Outline outlineScript;
+    void Start()
+    {
+        outlineScript = GetComponent<Outline>();
+        outlineScript.enabled = false;
     }
 }

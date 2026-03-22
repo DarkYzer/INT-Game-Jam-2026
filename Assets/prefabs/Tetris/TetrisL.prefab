@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -7175444664088812240}
   - component: {fileID: -2555010222937685100}
   - component: {fileID: 6570801030624934274}
+  - component: {fileID: 7208246697575696252}
   m_Layer: 0
   m_Name: TetrisL
   m_TagString: Untagged
@@ -130,6 +131,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
+--- !u!114 &7208246697575696252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681029119241094136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &5378277354251066623
 PrefabInstance:
   m_ObjectHideFlags: 0
