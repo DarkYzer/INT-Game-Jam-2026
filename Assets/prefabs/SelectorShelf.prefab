@@ -921,11 +921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'endProbaTable.Array.data[3]'
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'endProbaTable.Array.data[4]'
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'endProbaTable.Array.data[5]'
@@ -937,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'endProbaTable.Array.data[7]'
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 548749491104995896, guid: 44a9adfdf7b2ed444ae407f19e32d2dc, type: 3}
       propertyPath: 'endProbaTable.Array.data[8]'
