@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu Instance {get; private set;}
     [SerializeField] GameObject MenuPause;
+    [SerializeField] GameObject MenuDeath;
     [SerializeField] TextMeshProUGUI scoreText;
     
     public bool isPaused;
@@ -45,9 +46,9 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void YouDied(){
-
+        isPaused=true;
         //affiche l'écran de mort
-
+        MenuDeath.SetActive(true);
         //récupère et affiche le score
         int score=DragAndDropController.Instance.score;
         scoreText.text = $"Score: {score}";
