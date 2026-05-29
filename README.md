@@ -26,7 +26,9 @@ Nous sommes fiers de préciser que **l'intégralité des assets du jeu a été r
 * 📐 Tous les modèles **3D**.
 * 🎬 Toutes les **animations**.
 
-Rien n'a été récupéré sur internet, tout est fait maison (sauf le son) !
+  <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/446590cb-c6a8-4c8f-82f4-4934a30e220e" />
+
+  Rien n'a été récupéré sur internet, tout est fait maison (sauf le son) !
 
 ---
 
