@@ -47,8 +47,8 @@ Un immense bravo à toute l'équipe pour le travail fourni pendant ce week-end i
 
 * **Pierre "Farret81" FARRET** : 3D Graphist 📐
 * **Sophie "Yellownity" SINIAVSKI** : 2D Graphist & Developer 🎨💻
-* **Benjamin "Sup" MORA** : Developer 🎵💻
-* **Matthieu "Paquito" LESBROS** : Sound Designer
+* **Benjamin "Sup" MORA** : Developer 💻
+* **Matthieu "Paquito" LESBROS** : Sound Designer🎵
 * **Andili "Eragon1er" MAHIEU** : Developer 💻
 * **Héloïse "Helo" HAVY** : Developer 💻
 * **Annabelle "Nocty68" NYREK** : UI Developer 🖥️
